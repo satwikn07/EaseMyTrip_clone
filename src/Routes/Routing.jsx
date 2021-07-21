@@ -1,5 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
+import SearchBox from '../Components/LandingPage/SearchBox'
 import Navbar from '../Components/Navbar'
 
 const Routing = () => {
@@ -8,7 +9,7 @@ const Routing = () => {
             <Navbar />
             <Switch>
                 <Route exact path="/bus">
-                    <h1>bus Components</h1>
+                    <SearchBox />
                 </Route>
             </Switch>
         </div>

@@ -45,6 +45,23 @@ const Navbar = () => {
     const [showOptions, setShowOptions] = useState(false);
     const [showHelpline, setShowHelpLine] = useState(false)
     const [showAccount, setShowAccount] = useState(false)
+    const handleMoreHover = () => {
+        setShowOptions(!showOptions)
+        setShowAccount(false)
+        setShowHelpLine(false)
+    }
+
+    const handleHelpLineHover = () => {
+        setShowHelpLine(!showHelpline)
+        setShowAccount(false)
+        setShowOptions(false)
+    }
+
+    const handleAccountHover = () => {
+        setShowAccount(!showAccount)
+        setShowHelpLine(false)
+        setShowOptions(false)
+    }
     return (
         <nav className={styles.navBar}>
             <div className={styles.app_logo}>
@@ -96,7 +113,7 @@ const Navbar = () => {
             </div>
             <div className={styles.right_options}>
                 <div>
-                    <div onMouseOver={() => setShowHelpLine(!showHelpline)}> <i style={{ color: "grey", padding: "0px 0px" }} className="fas fa-headset" aria-hidden="true"></i> <span className={styles.right_span}>24x7 Helpline</span>&nbsp;<i style={{ float: "right" }} class="fa fa-angle-down" aria-hidden="true"></i></div>
+                    <div onMouseOver={handleHelpLineHover}> <i style={{ color: "grey", padding: "0px 0px" }} className="fas fa-headset" aria-hidden="true"></i> <span className={styles.right_span}>24x7 Helpline</span>&nbsp;<i style={{ float: "right" }} class="fa fa-angle-down" aria-hidden="true"></i></div>
                     {showHelpline ? <div className={styles.helpLineOptions}>
                         <div><Link className={styles.helpLineContact}>Tel : 011 - 43131313, 43030303</Link></div>
                         <hr />
@@ -104,12 +121,16 @@ const Navbar = () => {
                     </div> : null}
                 </div>
                 <div>
-                    <div onMouseOver={() => setShowAccount(!showAccount)}><i style={{ color: "grey", padding: "0px 5px" }} class="fas fa-user"></i><span className={styles.right_span}>My Account</span>&nbsp;<i style={{ float: "right" }} class="fa fa-angle-down" aria-hidden="true"></i></div>
+                    <div onMouseOver={handleAccountHover}><i style={{ color: "grey", padding: "0px 5px" }} class="fas fa-user"></i><span className={styles.right_span}>My Account</span>&nbsp;<i style={{ float: "right" }} class="fa fa-angle-down" aria-hidden="true"></i></div>
                     {showAccount ? <div className={styles.accountSection}>
-                        <div style={{borderBottom:"1px solid black"}}>
+                        <div>
                             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkb_ZfgrLalDPDvBKFqOHhb6khHvIF4ero7u_YuwSxc0lXZpj557ELj_gimy467wvSPXM&usqp=CAU" alt="" />
                             <button className={styles.loginBtn}>LOGIN OR SIGNUP</button>
                         </div>
+                        <hr className={styles.hr} />
+                        <Link className={styles.bokkingLinks}><i class="fas fa-chevron-right"></i><span className={styles.icon_space}>My Booking</span></Link>
+                        <br />
+                        <Link className={styles.bokkingLinks}><i class="fas fa-chevron-right"></i><span className={styles.icon_space}>My Booking</span></Link>
                     </div> : null}
                 </div>
             </div>
