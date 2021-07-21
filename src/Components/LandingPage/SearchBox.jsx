@@ -1,10 +1,11 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
+import { Redirect,Link,useHistory } from 'react-router'
 import styles from "../../style/searchBox.module.css"
 
 const SearchBox = () => {
+    const history = useHistory();
     const nextPage = () =>{
-        return <Redirect to=""/>
+          history.push("/filters")
     }
     return (
         <div className={styles.searchBoxMainDiv} >
@@ -22,7 +23,7 @@ const SearchBox = () => {
                 <input placeholder="Destination city" type="text" />
                 <div className={styles.dummyDiv2}></div>
                 <input className={styles.date} type="date" />
-                <button onClick={()=>{nextPage()}}><i class="fa fa-search" aria-hidden="true"></i>&nbsp;SEARCH BUS</button>
+                <button onClick={()=>{nextPage()}} style={{cursor:"pointer"}}><i class="fa fa-search" aria-hidden="true"></i>&nbsp;SEARCH BUS</button>
             </div>
         </div>
     )
