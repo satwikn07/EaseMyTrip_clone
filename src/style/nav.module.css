@@ -1,0 +1,52 @@
+.navBar {
+  width: 100%;
+  height: 65px;
+}
+
+.app_logo {
+  width: 12.2%;
+  height: 65px;
+  margin-left: 2.3%;
+  float: left;
+}
+.logo_image {
+  width: 100%;
+  height: 100%;
+}
+.navLinks_options {
+  width: 53%;
+  height: 50px;
+  float: left;
+  margin-left: 10px;
+  margin-top: 15px;
+  display: flex;
+}
+
+.navLinks{
+    padding: 19px 9px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-family: sans-serif;
+
+}
+.navLinks:hover {
+    color: orangered;
+    border-bottom: 4px solid orangered;
+}
+.vertical_line{
+    width: 1px;
+    height: 25px;
+    background-color: gray;
+    margin-top: 12.5px;
+}
+.selectOptions{
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline: none;
+}
+.selectOptions :hover{
+    display: block;
+}
+
