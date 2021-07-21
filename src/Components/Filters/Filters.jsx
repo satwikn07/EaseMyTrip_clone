@@ -37,7 +37,8 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "-3%"
     },
     iconColor: {
-        color: "grey"
+        color: "grey",
+        marginRight: "2%"
     }
   }));
 
@@ -115,8 +116,8 @@ export const Filters = () => {
             />
             <GpsFixedIcon className = {classes.iconColor} /><Typography variant = "subtitle2" >GPS Enalbed Buses</Typography>
         </ListItem>
-        <Grid >
-          <Typography style = {{marginLeft: "6%"}}>Price</Typography>
+        <Grid style = {{padding: "7%"}} >
+          <Typography style = {{marginLeft: "2%"}}>Price</Typography>
           <AirbnbSlider
                 ThumbComponent={AirbnbThumbComponent}
                 getAriaLabel={(index) => (index === 0 ? 'Minimum price' : 'Maximum price')}
