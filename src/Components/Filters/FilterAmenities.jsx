@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
@@ -15,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       maxWidth: 280,
       backgroundColor: theme.palette.background.paper,
+    },
+    departureButton : {
+        fontSize: "13px",
+        marginRight: "151px"
     },
     textSize: {
         fontSize: "10px"
@@ -32,7 +35,7 @@ export const FilterAmenities = () => {
     return (
         <div>
             <ListItem button onClick={handleAmenities}>
-                <ListItemText primary="AMENITIES" />
+            <Typography className = {classes.departureButton}>AMENITIES</Typography>
                 {amenities ? <ExpandLess /> : <ExpandMore />}
             </ListItem>
                 <Collapse in={amenities} timeout="auto" unmountOnExit>

@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
@@ -15,6 +14,10 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       maxWidth: 280,
       backgroundColor: theme.palette.background.paper,
+    },
+    departureButton : {
+        fontSize: "13px",
+        marginRight: "98px"
     },
     textSize: {
         fontSize: "10px"
@@ -31,12 +34,12 @@ export const FilterBoarding = () => {
     return (
         <div>
             <ListItem button onClick={handleBoarding}>
-                <ListItemText primary="BOARDING POINTS" />
+            <Typography className = {classes.departureButton}>BOARDING POINTS</Typography>
                 {boarding ? <ExpandLess /> : <ExpandMore />}
-            </ListItem>
+            </ListItem >
                 <Collapse in={boarding} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>        
-                    <ListItem button className={classes.nested}>
+                    <List component="div" disablePadding >        
+                        <ListItem button className={classes.nested}>
                             <Checkbox
                                 color="primary"
                                 inputProps={{ 'aria-label': 'secondary checkbox' }}
@@ -64,7 +67,7 @@ export const FilterBoarding = () => {
                             <Checkbox
                                 color="primary"
                                 inputProps={{ 'aria-label': 'secondary checkbox' }}
-                            /> <Typography>Panjagutta</Typography>
+                            /> <Typography >Panjagutta</Typography>
                         </ListItem>
                     </List>
                 </Collapse>

@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
@@ -18,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
       width: '100%',
       maxWidth: 280,
       backgroundColor: theme.palette.background.paper,
+    },
+    departureButton : {
+        fontSize: "13px",
+        marginRight: "43%"
     },
     textSize: {
         fontSize: "9px"
@@ -39,12 +42,12 @@ export const FilterDeparture = () => {
     return (
         <div>
             <ListItem button onClick={handleDeparture}>
-            <ListItemText primary="DEPARTURE TIME" className = {classes.textSize} /> 
+                <Typography className = {classes.departureButton}>DEPARTURE TIME</Typography>
             {departure ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
             <Collapse in={departure} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>        
-                    <ListItem button className={classes.nested}>
+                    <ListItem >
                         <Button className = {classes.outline} ><WbSunnyOutlinedIcon/> <br /> <Typography className = {classes.textSize}  >Before 6 AM</Typography> </Button>
                         <Button className = {classes.outline}><Brightness5OutlinedIcon/> <br /> <Typography className = {classes.textSize}  > 6 AM - 12 PM</Typography> </Button>
                         <Button className = {classes.outline}><Brightness4OutlinedIcon/> <br /> <Typography className = {classes.textSize} >12 PM - 6 PM</Typography> </Button>
