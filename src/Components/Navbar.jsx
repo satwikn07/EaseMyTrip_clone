@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import styles from "../style/nav.module.css";
-
+import axios from 'axios'; 
 const LinkList = [
     {
         to: "/flights",
@@ -45,6 +45,14 @@ const Navbar = () => {
     const [showOptions, setShowOptions] = useState(false);
     const [showHelpline, setShowHelpLine] = useState(false)
     const [showAccount, setShowAccount] = useState(false)
+    // useEffect(()=>{
+    //     fetchData()
+    // },[])
+    // const fetchData = async() =>{
+    //     try{
+    //         const data = await axios.get('http://localhost:1234/bus')
+    //     }
+    // }
     return (
         <nav className={styles.navBar}>
             <div className={styles.app_logo}>
