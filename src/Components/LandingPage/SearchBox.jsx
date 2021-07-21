@@ -1,10 +1,11 @@
 import React from 'react'
 import styles from "../../style/searchBox.module.css"
+import { useHistory } from 'react-router';
 
 const SearchBox = () => {
     const history = useHistory();
-    const nextPage = () =>{
-          history.push("/filters")
+    const nextPage = () => {
+        history.push("/filters")
     }
     return (
         <div>
@@ -27,7 +28,7 @@ const SearchBox = () => {
                 </div>
             </div>
             <div className={styles.externalPage}>
-                <img onClick={() => alert('clicked')} src="https://www.easemytrip.com/images/bus-img/guidelines-for-bus-travel.png" alt="" />
+                <img src="https://www.easemytrip.com/images/bus-img/guidelines-for-bus-travel.png" alt="" />
             </div>
         </div>
     )
