@@ -1,6 +1,8 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
+import SearchBox from '../Components/LandingPage/SearchBox'
 import Navbar from '../Components/Navbar'
+import { Filters } from '../Components/Filters/Filters'
 
 const Routing = () => {
     return (
@@ -8,7 +10,10 @@ const Routing = () => {
             <Navbar />
             <Switch>
                 <Route exact path="/bus">
-                    <h1>bus Components</h1>
+                    <SearchBox />
+                </Route>
+                <Route path="/filters">
+                    <Filters />
                 </Route>
             </Switch>
         </div>
