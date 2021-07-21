@@ -1,10 +1,12 @@
 import './App.css';
-import Routing from './Routes/Routing';
+import { Filters } from './Components/Filters/Filters';
+// import Routing from './Routes/Routing';
 
 function App() {
   return (
     <div className="App">
-      <Routing />
+      {/* <Routing /> */}
+      <Filters/>
     </div>
   );
 }
