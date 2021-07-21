@@ -35,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
         background: "#F2F2F2",
         padding: "7px",
         marginTop: "-3%"
+    },
+    iconColor: {
+        color: "grey"
     }
   }));
 
@@ -103,14 +106,14 @@ export const Filters = () => {
                 color="primary"
                 inputProps={{ 'aria-label': 'secondary checkbox' }}
             />
-            <Alarm/> <Typography variant = "subtitle2" >On Time Guarantee</Typography>
+            <Alarm className = {classes.iconColor} /> <Typography variant = "subtitle2" >On Time Guarantee</Typography>
         </ListItem>
         <ListItem divider>
             <Checkbox
                 color="primary"
                 inputProps={{ 'aria-label': 'secondary checkbox' }}
             />
-            <GpsFixedIcon/><Typography variant = "subtitle2" >GPS Enalbed Buses</Typography>
+            <GpsFixedIcon className = {classes.iconColor} /><Typography variant = "subtitle2" >GPS Enalbed Buses</Typography>
         </ListItem>
         <Grid >
           <Typography style = {{marginLeft: "6%"}}>Price</Typography>
