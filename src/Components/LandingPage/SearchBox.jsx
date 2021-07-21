@@ -5,7 +5,7 @@ import styles from "../../style/searchBox.module.css"
 const SearchBox = () => {
     const history = useHistory();
     const nextPage = () =>{
-          history.push("/filters")
+          history.push("/buslist")
     }
     return (
         <div className={styles.searchBoxMainDiv} >

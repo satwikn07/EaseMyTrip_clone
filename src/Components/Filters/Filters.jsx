@@ -13,13 +13,16 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import LoadingOverlay from 'react-loading-overlay';
+
 
 const useStyles = makeStyles((theme) => ({
     root: {
         border: "1px solid lightgrey",
       width: '100%',
       maxWidth: 280,
+      fontSize:"14px",
+      fontWeight: 400,
+      color:"#000000",
       backgroundColor: theme.palette.background.paper,
     },
   }));
@@ -64,10 +67,9 @@ export const Filters = () => {
   };
 
     return (
-        <LoadingOverlay active={false} spinner={<img src="	https://bus.easemytrip.com/new_img/bus-loading.gif"/>}  text={<p style={{fontSize:"13px"}}>Please wait, getting<br/>best deals for you <br/>on this route.</p>} fadeSpeed={500}>
       <List component="nav" className={classes.root} aria-label="mailbox folders">
         <ListItem button>
-          <Typography variant = "subtitle2" >Filter By</Typography>
+          <Typography variant = "subtitle2">Filter By</Typography>
         </ListItem>
         <Divider />
         <ListItem button divider>
@@ -76,10 +78,10 @@ export const Filters = () => {
                 color="primary"
                 inputProps={{ 'aria-label': 'secondary checkbox' }}
             />
-            <Alarm/><Typography variant = "subtitle2" >On Time Guarntee</Typography>
+            <Alarm/>On Time Guarntee
         </ListItem>
         <ListItem button>
-          <Typography>Price</Typography>
+            PRICE
           <Slider
                 value={value}
                 onChange={handleChange}
@@ -91,7 +93,7 @@ export const Filters = () => {
         <Divider light />
 
         <ListItem button onClick={handleDeparture}>
-            <ListItemText primary="DEPARTURE TIME" variant = "subtitle2" /> 
+            <ListItemText primary="DEPARTURE TIME" variant = "text" /> 
             {departure ? <ExpandLess /> : <ExpandMore />}
         </ListItem>
             <Collapse in={departure} timeout="auto" unmountOnExit>
@@ -263,6 +265,5 @@ export const Filters = () => {
                 </Collapse>
         
       </List>
-    </LoadingOverlay>
     )
 }

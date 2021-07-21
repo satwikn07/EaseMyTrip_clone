@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import SearchBox from '../Components/LandingPage/SearchBox'
 import Navbar from '../Components/Navbar'
 import { Filters } from '../Components/Filters/Filters'
+import { Buslist } from '../Components/Buslist/Buslist'
 
 const Routing = () => {
     return (
@@ -12,8 +13,8 @@ const Routing = () => {
                 <Route exact path="/bus">
                     <SearchBox />
                 </Route>
-                <Route path="/filters">
-                    <Filters />
+                <Route path="/buslist">
+                    <Buslist />
                 </Route>
             </Switch>
         </div>
