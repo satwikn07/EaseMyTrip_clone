@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import styles from "../style/nav.module.css";
-import axios from 'axios'; 
+// import axios from 'axios'; 
 const LinkList = [
     {
         to: "/flights",
@@ -46,11 +46,14 @@ const Navbar = () => {
     const [showHelpline, setShowHelpLine] = useState(false)
     const [showAccount, setShowAccount] = useState(false)
     // useEffect(()=>{
-    //     fetchData()
+    //     patchData()
     // },[])
-    // const fetchData = async() =>{
+    // const patchData = async() =>{
+    //     let payload = {ac:true}
     //     try{
-    //         const data = await axios.get('http://localhost:1234/bus')
+    //         const data = await axios.patch('http://localhost:1234/bus/8',payload)
+    //     }catch(err){
+    //         console.log('error');
     //     }
     // }
     return (
