@@ -1,0 +1,87 @@
+.searchBoxMainDiv {
+  width: 100%;
+  height: 250px;
+  background: #0099cc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.serach_heading{
+    width: 20%;
+    height: 50px;
+    display: flex;
+}
+
+.serach_heading>img{
+    width: 40px;
+    height: 40px;
+}
+.serach_heading>span{
+    margin-top: 5px;
+    padding-left: 20px;
+    font-size: 26px;
+    color: #ffffff;
+}
+
+.serachBox{
+    width: 80%;
+    height: 65px;
+    display: flex;
+    margin-top: 10px;
+}
+.serachBox>input{
+    width: 28%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding-left: 15px;
+    font-weight: 700;
+    color: rgb(49, 49, 49);
+}
+.date{
+    font-size: 25px;
+    color: rgb(92, 90, 90);
+    padding: 20px;
+}
+.serachBox>button{
+    width: 20%;
+    border: none;
+    outline: none;
+    background: #ef6614;
+    font-size: 15px;
+    color: white;
+    font-weight: 500;
+}
+.dummyDiv1{
+    width: 30px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+.line1{
+    width: 1px;
+    height: 19px;
+    border: 1px solid gray;
+}
+.exchange{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid grey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-exchange{
+    color: gray;
+}
+.dummyDiv2{
+    width: 1px;
+    height: 100%;
+    border: 1px solid gray;
+}
