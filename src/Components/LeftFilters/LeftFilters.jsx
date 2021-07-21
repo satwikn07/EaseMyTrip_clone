@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     }
   }));
 
-export const Filters = () => {
+export const LeftFilters = () => {
 
     const classes = useStyles();
 
