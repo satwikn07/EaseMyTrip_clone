@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import styles from "../style/nav.module.css";
-// import axios from 'axios'; 
 const LinkList = [
     {
         to: "/flights",
@@ -92,7 +91,7 @@ const Navbar = () => {
                     );
                 })}
                 <span
-                    onMouseOver={() => setShowOptions(!showOptions)}
+                    onMouseOver={handleMoreHover}
                     className={styles.navLinks}
                 >
                     MORE &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i>
