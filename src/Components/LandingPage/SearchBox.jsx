@@ -1,8 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import styles from "../../style/searchBox.module.css"
 
 const SearchBox = () => {
+    const history = useHistory();
+    const nextPage = () =>{
+          history.push("/filters")
+    }
     return (
         <div>
             <div className={styles.searchBoxMainDiv} >

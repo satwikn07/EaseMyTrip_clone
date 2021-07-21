@@ -13,7 +13,7 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import StarBorder from '@material-ui/icons/StarBorder';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-
+import LoadingOverlay from 'react-loading-overlay';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -64,6 +64,7 @@ export const Filters = () => {
   };
 
     return (
+        <LoadingOverlay active={false} spinner={<img src="	https://bus.easemytrip.com/new_img/bus-loading.gif"/>}  text={<p style={{fontSize:"13px"}}>Please wait, getting<br/>best deals for you <br/>on this route.</p>} fadeSpeed={500}>
       <List component="nav" className={classes.root} aria-label="mailbox folders">
         <ListItem button>
           <Typography variant = "subtitle2" >Filter By</Typography>
@@ -262,6 +263,6 @@ export const Filters = () => {
                 </Collapse>
         
       </List>
-
+    </LoadingOverlay>
     )
 }

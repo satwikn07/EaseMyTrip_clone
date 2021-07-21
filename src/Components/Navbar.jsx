@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import styles from "../style/nav.module.css";
-
 const LinkList = [
     {
         to: "/flights",
@@ -45,6 +44,7 @@ const Navbar = () => {
     const [showOptions, setShowOptions] = useState(false);
     const [showHelpline, setShowHelpLine] = useState(false)
     const [showAccount, setShowAccount] = useState(false)
+
     const handleMoreHover = () => {
         setShowOptions(!showOptions)
         setShowAccount(false)
@@ -62,6 +62,7 @@ const Navbar = () => {
         setShowHelpLine(false)
         setShowOptions(false)
     }
+
     return (
         <nav className={styles.navBar}>
             <div className={styles.app_logo}>
@@ -90,7 +91,7 @@ const Navbar = () => {
                     );
                 })}
                 <span
-                    onMouseOver={() => setShowOptions(!showOptions)}
+                    onMouseOver={handleMoreHover}
                     className={styles.navLinks}
                 >
                     MORE &nbsp;<i class="fa fa-angle-down" aria-hidden="true"></i>
@@ -124,7 +125,7 @@ const Navbar = () => {
                     <div onMouseOver={handleAccountHover}><i style={{ color: "grey", padding: "0px 5px" }} class="fas fa-user"></i><span className={styles.right_span}>My Account</span>&nbsp;<i style={{ float: "right" }} class="fa fa-angle-down" aria-hidden="true"></i></div>
                     {showAccount ? <div className={styles.accountSection}>
                         <div>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkb_ZfgrLalDPDvBKFqOHhb6khHvIF4ero7u_YuwSxc0lXZpj557ELj_gimy467wvSPXM&usqp=CAU" alt="" />
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkb_ZfgrLalDPDvBKFqOHhb6khHvIF4ero7u_YuwSxc0lXZpj557ELj_gimy467wvSPXMusqp=CAU" alt="" />
                             <button className={styles.loginBtn}>LOGIN OR SIGNUP</button>
                         </div>
                         <hr className={styles.hr} />
