@@ -48,7 +48,7 @@
   padding-left: 8px;
 }
 
-.validity_through{
+.validity_through {
   width: 145px;
   height: 20px;
   float: left;
@@ -56,18 +56,11 @@
   margin-top: 40px;
   text-align: right;
 }
-.validity_information{
+.validity_information {
   font-size: 12px;
   font-weight: 400;
   color: gray;
 }
-
-
-
-
-
-
-
 
 .rec.rec-arrow {
   border-radius: 0px;
