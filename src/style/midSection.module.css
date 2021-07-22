@@ -38,15 +38,15 @@
 .grid4:hover {
   transform: scale(1.15);
 }
-.gridsImages{
+.gridsImages {
   width: 80px;
   height: 50px;
 }
-.grid_headings{
+.grid_headings {
   font-weight: 400;
   font-size: 19px;
 }
-.grid_div_paragraph{
+.grid_div_paragraph {
   font-size: 14px;
   font-weight: 400;
   padding-top: 10px;
