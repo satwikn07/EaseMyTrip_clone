@@ -9,6 +9,7 @@ import axios from 'axios';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
+      width:'95vw'
     },
     paper: {
       padding: theme.spacing(0),
@@ -17,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
       fontSize:"14px",
       fontWeight: 400,
       color:"#000000",
+      width:"100%"
     },
   }));
 export const Buslist = () =>{
@@ -49,7 +51,7 @@ export const Buslist = () =>{
     <div className={classes.root}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <Paper className={classes.paper}>Blue bar</Paper>
+            <div className={classes.paper}>Blue bar</div>
           </Grid>
           <Grid container spacing={3} style={{paddingLeft:"12vw"}}>
           <Grid item xs={12} sm={2}>

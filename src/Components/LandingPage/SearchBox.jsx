@@ -1,13 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { useHistory } from "react-router"
 import styles from "../../style/searchBox.module.css"
 
 const SearchBox = () => {
     const history = useHistory();
     const nextPage = () =>{
-          history.push("/buslist")
+        history.push("/buslist")
     }
     return (
-        <div>
+        <div >
             <div className={styles.searchBoxMainDiv} >
                 <div className={styles.serach_heading}>
                     <img src="https://i.ibb.co/YQy1MCs/icons8-train-50.png" alt="" />
@@ -23,7 +24,7 @@ const SearchBox = () => {
                     <input placeholder="Destination city" type="text" />
                     <div className={styles.dummyDiv2}></div>
                     <input className={styles.date} type="date" />
-                    <button><i class="fa fa-search" aria-hidden="true"></i>&nbsp;SEARCH BUS</button>
+                    <button onClick={()=>{nextPage()}} style={{cursor:"pointer"}}><i class="fa fa-search" aria-hidden="true"></i>&nbsp;SEARCH BUS</button>
                 </div>
             </div>
             <div className={styles.externalPage}>
