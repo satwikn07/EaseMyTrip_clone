@@ -44,7 +44,7 @@ export const Buslist = () => {
     }
   }
   return (
-    <LoadingOverlay active={!isLoading} spinner={<img src="	https://bus.easemytrip.com/new_img/bus-loading.gif" />} text={<p style={{ fontSize: "13px" }}>Please wait, getting<br />best deals for you <br />on this route.</p>} fadeSpeed={500}>
+    <LoadingOverlay active={isLoading} spinner={<img src="	https://bus.easemytrip.com/new_img/bus-loading.gif" />} text={<p style={{ fontSize: "13px" }}>Please wait, getting<br />best deals for you <br />on this route.</p>} fadeSpeed={500}>
 
       <div className={classes.root}>
         <Grid container spacing={3}>
@@ -52,10 +52,10 @@ export const Buslist = () => {
             <Paper className={classes.paper}>Blue bar</Paper>
           </Grid>
           <Grid container spacing={3} style={{ paddingLeft: "12vw" }}>
-            
+
             <Grid item xs={12} sm={2}>
-            <div className={classes.paper}><FiltersAlign /></div>
-          </Grid>
+              <div className={classes.paper}><FiltersAlign /></div>
+            </Grid>
             <Grid item xs={12} sm={8}>
               <div className={classes.paper}>
                 {buses?.map(bus => <Buscard bus={bus} key={bus.id} />)}

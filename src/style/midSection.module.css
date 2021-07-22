@@ -27,12 +27,30 @@
   border: 1px solid grey;
   border-radius: 10px;
   transition: transform 0.5s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .grid1:hover,
 .grid2:hover,
 .grid3:hover,
 .grid4:hover {
   transform: scale(1.15);
+}
+.gridsImages{
+  width: 80px;
+  height: 50px;
+}
+.grid_headings{
+  font-weight: 400;
+  font-size: 19px;
+}
+.grid_div_paragraph{
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 10px;
+  color: rgb(94, 92, 92);
 }
 
 .couponInfo {
