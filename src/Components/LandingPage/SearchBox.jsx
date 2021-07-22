@@ -4,8 +4,10 @@ import { useHistory } from 'react-router';
 
 const SearchBox = () => {
     const history = useHistory();
-    const nextPage = () => {
-        history.push("/filters")
+
+
+    const nextPage = () =>{
+          history.push("/buslist")
     }
     return (
         <div>
@@ -28,7 +30,7 @@ const SearchBox = () => {
                 </div>
             </div>
             <div className={styles.externalPage}>
-                <img src="https://www.easemytrip.com/images/bus-img/guidelines-for-bus-travel.png" alt="" />
+                <img onClick={nextPage} src="https://www.easemytrip.com/images/bus-img/guidelines-for-bus-travel.png" alt="" />
             </div>
         </div>
     )
