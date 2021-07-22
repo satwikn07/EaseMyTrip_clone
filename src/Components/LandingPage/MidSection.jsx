@@ -6,10 +6,26 @@ const MidSection = () => {
             <div className={styles.mid_div}>
                 <h1>Why EaseMyTrip for Bus Booking?</h1>
                 <div className={styles.grid_div}>
-                    <div className={styles.grid1}></div>
-                    <div className={styles.grid2}></div>
-                    <div className={styles.grid3}></div>
-                    <div className={styles.grid4}></div>
+                    <div className={styles.grid1}>
+                        <img className={styles.gridsImages} src="https://www.easemytrip.com/images/bus-img/bus-exclusive-options.png" alt="" />
+                        <h2 className={styles.grid_headings}>Extensive Options</h2>
+                        <p className={styles.grid_div_paragraph} >Book from the selection of buses, including AC, Non-AC, Deluxe and more.</p>
+                    </div>
+                    <div className={styles.grid2}>
+                        <img className={styles.gridsImages} src="https://www.easemytrip.com/images/bus-img/bus-discount2.png" alt="" />
+                        <h2 className={styles.grid_headings}>Discounts or Cashbacks</h2>
+                        <p className={styles.grid_div_paragraph}>We also assure cash backs and reward points to the customers.</p>
+                    </div>
+                    <div className={styles.grid3}>
+                        <img className={styles.gridsImages} src="https://www.easemytrip.com/images/bus-img/bus-payment-option.png" alt="" />
+                        <h2 className={styles.grid_headings}>Payment Options</h2>
+                        <p className={styles.grid_div_paragraph}>Pay through cards, Net banking or mobile wallets for Bus reservation</p>
+                    </div>
+                    <div className={styles.grid4}>
+                        <img className={styles.gridsImages} src="https://www.easemytrip.com/images/bus-img/bus-operator.png" alt="" />
+                        <h2 className={styles.grid_headings}>Book for 2000+ Bus Operators</h2>
+                        <p className={styles.grid_div_paragraph}>We have tied up with best bus operators in India to make travel easy.</p>
+                    </div>
                 </div>
             </div>
             <div className={styles.couponInfo}>
