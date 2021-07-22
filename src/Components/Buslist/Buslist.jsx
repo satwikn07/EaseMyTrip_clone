@@ -2,9 +2,9 @@ import React,{useState,useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import {Filters} from '../Filters/Filters';
 import {Buscard} from './Buscard';
 import LoadingOverlay from 'react-loading-overlay';
+import {FiltersAlign} from "../FiltersAlignment/FiltersAlign"
 import axios from 'axios';
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -53,7 +53,7 @@ export const Buslist = () =>{
           </Grid>
           <Grid container spacing={3} style={{paddingLeft:"12vw"}}>
           <Grid item xs={12} sm={2}>
-            <div className={classes.paper}><Filters /></div>
+            <div className={classes.paper}><FiltersAlign/></div>
           </Grid>
           <Grid item xs={12} sm={8}>
             <div className={classes.paper}>
