@@ -23,6 +23,7 @@ const useStyles = makeStyles((theme) => ({
         borderRadius: "5px",
         width: '100%',
         maxWidth: 280,
+        margin: "6% 0 0 11%",
         backgroundColor: theme.palette.background.paper,
     },
     resetButton: {
@@ -96,7 +97,7 @@ export const LeftFilters = () => {
       }
 
     return (
-      <List component="nav" className={classes.root} aria-label="mailbox folders">
+      <List component="nav" className={classes.root} >
         <ListItem className = {classes.headingBackground} >
           <Typography variant = "subtitle2" style = {{marginLeft: "3%"}} >Filter By</Typography>
           <Button variant = "subtitle2" className = {classes.resetButton} >Reset All</Button>

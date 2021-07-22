@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme) => ({
         marginLeft: "-4%"
     },
     buttonGap: {
-        margin: "0 -12.5% 0 0"
+        margin: "7.5% -14.3% 0 0"
     }
   }));
 
