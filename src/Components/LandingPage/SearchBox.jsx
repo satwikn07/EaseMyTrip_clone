@@ -106,6 +106,9 @@ const SearchBox = () => {
                         </div>
                     ) : null}
 
+
+                    
+
                     <div className={styles.dummyDiv1}>
                         <div className={styles.line1}></div>
                         <div className={styles.exchange}>
@@ -143,6 +146,7 @@ const SearchBox = () => {
                         <i class="fa fa-search" aria-hidden="true"></i>&nbsp; SEARCH BUS
                     </button>
                 </div>
+                <br />
             </div>
             <div className={styles.externalPage}>
                 <img
