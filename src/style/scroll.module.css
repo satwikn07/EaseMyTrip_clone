@@ -1,0 +1,12 @@
+.scrollDiv {
+  position: fixed;
+  width: 70px;
+  height: 70px;
+  left: 93%;
+  top: 85%;
+  background: #0099cc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
