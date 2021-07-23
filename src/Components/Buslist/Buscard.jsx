@@ -17,7 +17,7 @@ export const Buscard = ({bus}) =>{
             <div className={styles.upper}>
                 <div className={styles.inner}>
                     <div style={{float:"left",fontWeight:"600",fontSize:"16px"}}>{bus.bus_name}</div>
-                    <div style={{float:"left",clear:"left",fontWeight:"400",fontSize:"6.5px",color:"#838484"}}>NON AC/ 2 X 2 sleeper coach</div>
+                    <div style={{float:"left",clear:"left",fontWeight:"400",fontSize:"13px",color:"#838484"}}>NON AC/ 2 X 2 sleeper coach</div>
                 </div>
                 <div className={styles.inner}>
                     <div style={{float:"left",fontWeight:"600",fontSize:"18px"}}>{bus.start_time}</div>

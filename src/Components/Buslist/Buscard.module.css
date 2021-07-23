@@ -3,10 +3,13 @@
     grid-template-columns:30% 35% 17% 21%;
     padding:2vh 2vh 0vh 2vh;
     grid-template-rows: 10vh;
+    background-color: white;
 }
 .inner{
     /* border: 1px solid #EBEBEB; */
     text-align: center;
+  
+
 }
 .card{
     border: 1px solid #EBEBEB;
@@ -25,6 +28,8 @@
     color:#838484;
     font-size:12px;
     font-weight: 400px; 
+    
+
 }
 .Button{
     background:#ef6614;
@@ -34,8 +39,30 @@
     height:5vh;
     width:70%;
     border: none;
-    outline: none;    
+    outline: none;  
+    
+  
 }
 .Button:hover{
     background:#DA5200;
+}
+.colhead{
+    color: #727272;
+    font-size: 11px;
+    font-weight:600
+}
+.colhead2{
+    color:#3c3939;
+    font-size:15px;
+    font-weight:600   
+}
+.fromto{
+    color:#000000;
+    font-size:23px;
+    font-weight:500;
+}
+.date{
+    color:#888686;
+    font-size:16px;
+    font: weight 400px;
 }
