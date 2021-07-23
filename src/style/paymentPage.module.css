@@ -1,0 +1,171 @@
+.payment_main_div {
+  width: 60%;
+  height: 700px;
+  margin-left: 7%;
+  margin-top: 20px;
+}
+.pay_wallet_div {
+  width: 100%;
+  height: 80px;
+  box-shadow: -1px -1px 5px rgb(201, 196, 196), 1px 1px 5px rgb(182, 181, 181);
+  border-radius: 5px;
+  display: flex;
+}
+.wallet_image {
+  width: 40px;
+  height: 40px;
+  margin: 18px 20px;
+}
+
+.wallet_pay_info {
+  padding: 25px;
+  font-size: 18px;
+}
+.wallet_amnt {
+  font-weight: bold;
+}
+
+.wallet_login_btn {
+  width: 90px;
+  height: 30px;
+  margin: 25px;
+  background: #2196f3;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 7px 20px;
+  margin-left: 210px;
+}
+
+.payment_option_div {
+  width: 100%;
+  height: 600px;
+  box-shadow: -1px -1px 5px rgb(201, 196, 196), 1px 1px 5px rgb(182, 181, 181);
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.payment_details_options {
+  width: 25%;
+  height: 100%;
+  border-right: 1px solid rgb(202, 200, 200);
+  background: whitesmoke;
+  float: left;
+}
+.pay_options_div {
+  width: 100%;
+  height: 250px;
+  display: grid;
+  grid-template: "div";
+}
+.pay_options_div > div {
+  border-bottom: 1px solid rgb(202, 200, 200);
+  display: flex;
+  font-size: 13px;
+}
+.payment_fill_div {
+  width: 72%;
+  height: 90%;
+  float: left;
+  margin-top: 20px;
+  margin-left: 2%;
+}
+
+.pay_card_num {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.pay_card_num > input {
+  width: 80%;
+  height: 50px;
+  font-size: 15px;
+  padding-left: 20px;
+  margin-top: 10px;
+  outline: none;
+  border: 1px solid rgb(202, 200, 200);
+}
+.card_num_input {
+  background: url("https://i.ibb.co/McHfDpJ/allCard.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.exp_cvv_div {
+  width: 80%;
+  height: 80px;
+
+  display: grid;
+  grid-template-columns: 70% 30%;
+}
+
+.exp_month,
+.exp_year {
+  width: 150px;
+  height: 50px;
+  font-size: 15px;
+  padding: 0px 5px;
+  outline: none;
+  border: 1px solid rgb(202, 200, 200);
+  margin-top: 10px;
+}
+.exp_year {
+  margin-left: 20px;
+}
+.card_detail_cvv {
+  width: 140px;
+  height: 50px;
+  font-size: 15px;
+  padding: 0px 5px;
+  outline: none;
+  border: 1px solid rgb(202, 200, 200);
+  margin-top: 10px;
+}
+.save_card_details{
+    margin-top: 5px;
+}
+input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+    float: left;
+}
+.checkbox_label{
+    font-size: 13px;
+    font-weight: 400;
+    padding-left: 10px;
+}
+.price_submit_btn{
+    width: 80%;
+    margin-top: 10px;
+    display: flex;
+}
+.h3_heading_fare{
+    width: 200px;
+    margin-top: 7px;
+}
+.total_fare{
+    color: #F00;
+    font-size: 25px;
+}
+input[type="submit"]{
+    width: 200px;
+    height: 40px;
+    color: #ffffff;
+    background: #ef6614;
+    font-size: 19px;
+    margin-left: 107px;
+    outline: none;
+    border: 1px solid #ef6614;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.pay_secure_info{
+    text-align: left;
+    font-size: 11px;
+    margin-top: 10px;
+    color: rgb(153, 151, 151);
+    padding-left: 30px;
+}

@@ -4,8 +4,8 @@
   margin-top: 30px;
 }
 .sliderDiv {
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
   border: 1px solid gray;
   display: flex;
   flex-direction: column;
