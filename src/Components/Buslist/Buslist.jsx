@@ -5,8 +5,12 @@ import Grid from "@material-ui/core/Grid";
 import { Buscard } from "./Buscard";
 import LoadingOverlay from "react-loading-overlay";
 import axios from "axios";
-import { FiltersAlign } from "./../FiltersAlignment/FiltersAlign";
+// import { FiltersAlign } from "./../FiltersAlignment/FiltersAlign";
+import {LeftFilters} from '../LeftFilters/LeftFilters';
+import { TopFilters } from "../TopFilters/TopFilters";
 import { useSelector } from "react-redux";
+import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
+import styles from './Buscard.module.css';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -45,6 +49,7 @@ export const Buslist = () => {
     }
   };
   return (
+    <div style={{width:"100%",backgroundColor:"#F2F2F2"}}>
     <LoadingOverlay
       active={isLoading}
       spinner={<img src="	https://bus.easemytrip.com/new_img/bus-loading.gif" />}
@@ -58,18 +63,31 @@ export const Buslist = () => {
       }
       fadeSpeed={500}
     >
-      <div className={classes.root}>
-        <Grid container spacing={3}>
+      <Grid className={classes.root}>
+        <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Paper className={classes.paper}>Blue bar</Paper>
+            <Grid className={classes.paper}>Bluebar</Grid>
           </Grid>
-          <Grid container spacing={3} style={{ paddingLeft: "12vw" }}>
-            <Grid item xs={12} sm={2}>
-              <div className={classes.paper}>
-                <FiltersAlign />
-              </div>
+          <Grid container spacing={1} style={{paddingLeft:"10vw"}}>
+            <Grid item xs={12} sm={3}>
+              <Grid className={classes.paper}>
+                <LeftFilters />
+              </Grid>
             </Grid>
             <Grid item xs={12} sm={8}>
+              <div><TopFilters/></div>
+              <Grid container spacing={1} style={{marginBottom:"1vh",marginTop:"1.5vh"}}>
+                  <Grid item xs={2} sm={4}  className={styles.fromto}>Hyderbad <i class="fa fa-arrow-right" style={{fontSize:"18px"}}></i> Bangalore</Grid>
+                  <Grid item xs={2} sm={5} className={styles.date}>| &nbsp; Friday, 23 july 2021</Grid>
+              </Grid>
+              <Grid container spacing={1} style={{marginBottom:"2vh"}}>
+                  <Grid item xs={2} sm={3} className={styles.colhead} >BUS OPERATOR</Grid>
+                  <Grid item xs={2} sm={2} className={styles.colhead} style={{paddingLeft:"5.5%"}}>DEPARTURE</Grid>
+                  <Grid item xs={2} sm={2} className={styles.colhead} style={{paddingLeft:"5.5%"}}>DURATION</Grid>
+                  <Grid item xs={2} sm={1} className={styles.colhead} >ARRIVAL</Grid>
+                  <Grid item xs={2} sm={2} className={styles.colhead} style={{paddingLeft:"4.5%"}}>PRICE</Grid>
+                  <Grid item xs={2} sm={2} className={styles.colhead2} style={{paddingLeft:"5%"}}>10 Results</Grid>
+              </Grid>
               <div className={classes.paper}>
                 {buses?.map((bus) => (
                   <Buscard bus={bus} key={bus.id} />
@@ -78,7 +96,8 @@ export const Buslist = () => {
             </Grid>
           </Grid>
         </Grid>
-      </div>
+      </Grid>
     </LoadingOverlay>
+    </div>
   );
 };
