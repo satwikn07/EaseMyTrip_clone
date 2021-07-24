@@ -11,6 +11,7 @@ import { TopFilters } from "../TopFilters/TopFilters";
 import { useSelector } from "react-redux";
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import styles from './Buscard.module.css';
+import { AppBar, TextField, Toolbar, Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "14px",
     fontWeight: 400,
     color: "#000000",
-  },
+  }
 }));
 export const Buslist = () => {
   const classes = useStyles();
@@ -66,7 +67,23 @@ export const Buslist = () => {
       <Grid className={classes.root}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
-            <Grid className={classes.paper}>Bluebar</Grid>
+            <Grid className={classes.paper}>
+              <div style = {{border: "1px solid #53C6F2", background: "#41A4F0", marginTop: "-0.4%", padding: "1%", display: "flex"}}>
+                <div style = {{marginLeft: "11%"}}>
+                  <h4 style = {{color: "white", textAlign: "left"}}>SOURCE CITY</h4>
+                  <input type="text" style = {{padding: "5px", color: "white", width: "250px"}} />
+                </div>
+                <div style = {{marginLeft: "5%"}}>
+                  <h4 style = {{color: "white", textAlign: "left"}}>DESTINATION CITY</h4>
+                  <input type="text" style = {{padding: "5px", color: "white", width: "250px"}}/>
+                </div>
+                <div style = {{marginLeft: "5%"}}>
+                  <h4 style = {{color: "white", textAlign: "left"}}>DEPARTURE DATE</h4>
+                  <input type="date" style = {{color: "white", width: "250px"}} />
+                </div>
+                  <button style = {{border: "1px solid white", color:"white", width: "180px", borderRadius: "5px", fontSize: "15px", marginLeft: "5%", padding: "1%", background: "#51C3F1"}}>Submit</button>
+              </div>
+            </Grid>
           </Grid>
           <Grid container spacing={1} style={{paddingLeft:"10vw"}}>
             <Grid item xs={12} sm={3}>
