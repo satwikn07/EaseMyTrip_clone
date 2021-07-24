@@ -21,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
     },
     textSize: {
         fontSize: "10px"
+    },
+    arrrow : {
+        position: "absolute",
+        marginLeft: "80%"
     }
   }));
 
@@ -34,7 +38,7 @@ export const FilterBusType = () => {
         <div>
             <ListItem button onClick={handleBusType}>
             <Typography className = {classes.departureButton}>BUS TYPE</Typography>
-                {busType ? <ExpandLess /> : <ExpandMore />}
+                <div className = {classes.arrrow}>{busType ? <ExpandLess /> : <ExpandMore />}</div>
             </ListItem>
                 <Collapse in={busType} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>        

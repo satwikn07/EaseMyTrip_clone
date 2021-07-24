@@ -1,3 +1,5 @@
+
+
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
@@ -27,8 +29,12 @@ const useStyles = makeStyles((theme) => ({
     },
     outline: {
         border: "1px solid lightgrey",
-        height: "9vh",
+        height: "8vh",
         color: "grey"
+    },
+    arrrow : {
+        position: "absolute",
+        marginLeft: "80%"
     }
   }));
 
@@ -43,8 +49,8 @@ export const FilterDeparture = () => {
         <div>
             <ListItem button onClick={handleDeparture}>
                 <Typography className = {classes.departureButton}>DEPARTURE TIME</Typography>
-            {departure ? <ExpandLess /> : <ExpandMore />}
-        </ListItem>
+            <div className = {classes.arrrow}>{departure ? <ExpandLess /> : <ExpandMore />}</div>
+            </ListItem>
             <Collapse in={departure} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>        
                     <ListItem >

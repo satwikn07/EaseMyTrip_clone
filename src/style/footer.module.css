@@ -1,0 +1,202 @@
+.blue_div {
+  width: 100%;
+  height: 15px;
+}
+.dark_blue {
+  width: 28%;
+  height: 100%;
+  float: left;
+  background: #4263c1;
+}
+.Light_blue {
+  width: 72%;
+  height: 100%;
+  float: left;
+  background: #0099cc;
+}
+.footer {
+  width: 100%;
+  height: 470px;
+  background: #333333;
+}
+.footer_container {
+  float: left;
+  width: 95%;
+  height: 350px;
+  display: grid;
+  grid-template-columns: 50% 30% 20%;
+  margin: auto;
+  margin-top: 20px;
+  margin-left: 2.5%;
+}
+.footer_container > div:nth-child(1) {
+  border-right: 1px solid rgb(175, 175, 175);
+}
+.footer_container > div:nth-child(2) {
+  border-right: 1px solid rgb(175, 175, 175);
+}
+
+.foooter_Links {
+  display: grid;
+  grid-template: "div div div div";
+  gap: 10px;
+}
+
+.footer_links_heading {
+  color: white;
+}
+.unorderList {
+  list-style: none;
+  margin-top: 20px;
+}
+.listGroup {
+  font-size: 14px;
+  line-height: 25px;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.8s ease 0s;
+  font-family: "Open Sans", sans-serif;
+}
+.listGroup:hover {
+  text-decoration: underline;
+  padding-left: 5px;
+}
+
+.footer_pay_info {
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+.card_images {
+  width: 100%;
+  height: 110px;
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.card_images > div > img {
+  width: 100%;
+  height: 40px;
+  background: white;
+  border-radius: 10px;
+  border: 1px solid rgb(116, 113, 113);
+}
+
+.socialMediaInfo {
+  width: 100%;
+  height: 150px;
+  margin-top: 50px;
+}
+.icons_div {
+  width: 70%;
+  height: 60px;
+  display: grid;
+  grid-template: "div div div div div";
+  gap: 15px;
+  margin-top: 30px;
+}
+.icons_div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icons_div > div > img {
+  width: 35px;
+  height: 35px;
+  background: #ffffff;
+  border-radius: 50%;
+}
+.logiImage1:hover {
+  transition: 0.9s;
+  transform: rotate(360deg);
+  background: #4267b2;
+}
+.logiImage2:hover {
+  transition: 0.9s;
+  transform: rotate(360deg);
+  background: #1da1f2;
+}
+.logiImage3:hover {
+  transition: 0.9s;
+  transform: rotate(360deg);
+  background: #ff0000;
+}
+.logiImage4:hover {
+  transition: 0.9s;
+  transform: rotate(360deg);
+  background: #0077b5;
+}
+.logiImage5:hover {
+  transition: 0.9s;
+  transform: rotate(360deg);
+  background: #b6554e;
+}
+
+.bottom_line {
+  width: 100%;
+  height: 1px;
+  background: grey;
+  float: left;
+  margin-top: 20px;
+}
+
+.download_div {
+  width: 80%;
+  height: 180px;
+  margin-left: 10%;
+}
+.download_div > h6 {
+  color: white;
+  font-size: 15px;
+}
+.download_div > h5 {
+  color: white;
+  font-size: 20px;
+  margin-top: 10px;
+}
+.store_Links {
+  width: 130px;
+  margin-top: 20px;
+}
+.store_Links:hover {
+  transform: perspective(5px) translateZ(0);
+}
+.store_Link2 {
+  margin-top: 10px;
+}
+.store_Links2:hover {
+  transform: perspective(5px) translateZ(0);
+}
+
+.copyRight_div {
+  width: 98%;
+  height: 50px;
+  float: left;
+  margin-top: 20px;
+  margin-left: 1%;
+}
+.copyRight_content {
+  width: 20%;
+  height: 50px;
+  float: left;
+  text-align: center;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 20px;
+}
+.companies_logos {
+  width: 40%;
+  height: 50px;
+  float: right;
+  margin-right: 10%;
+}
+.companies_logos>img{
+    width: 100%;
+    height: 100%;
+}

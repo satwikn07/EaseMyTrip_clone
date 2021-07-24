@@ -23,6 +23,10 @@ const useStyles = makeStyles((theme) => ({
     },
     textSize: {
         fontSize: "10px"
+    },
+    arrrow : {
+        position: "absolute",
+        marginLeft: "80%"
     }
   }));
 
@@ -36,7 +40,7 @@ export const FilterOperator = () => {
         <div>
             <ListItem button onClick={handleOperator}>
             <Typography className = {classes.departureButton}>BUS OPERATOR</Typography>
-                {operator ? <ExpandLess /> : <ExpandMore />}
+                <div className = {classes.arrrow}>{operator ? <ExpandLess /> : <ExpandMore />}</div>
             </ListItem>
                 <Collapse in={operator} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>        

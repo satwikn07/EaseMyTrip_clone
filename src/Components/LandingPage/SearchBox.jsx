@@ -2,8 +2,11 @@ import React from 'react'
 import { useHistory } from 'react-router-dom';
 import styles from "../../style/searchBox.module.css"
 
+
 const SearchBox = () => {
     const history = useHistory();
+
+
     const nextPage = () =>{
           history.push("/buslist")
     }
@@ -28,7 +31,7 @@ const SearchBox = () => {
                 </div>
             </div>
             <div className={styles.externalPage}>
-                <img onClick={() => alert('clicked')} src="https://www.easemytrip.com/images/bus-img/guidelines-for-bus-travel.png" alt="" />
+                <img onClick={nextPage} src="https://www.easemytrip.com/images/bus-img/guidelines-for-bus-travel.png" alt="" />
             </div>
         </div>
     )
