@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         border: "1px solid lightgrey",
         borderRadius: "5px",
-        width: '100%',
+        width: '134%',
         maxWidth: 280,
         margin: "6% 0 0 11%",
         backgroundColor: theme.palette.background.paper,
@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "10px",
         color: "purple",
         textDecoration: "underline",
-        marginLeft: "43%"
+        marginLeft: "39%"
     },
     headingBackground: {
         background: "#F2F2F2",
@@ -52,7 +52,7 @@ export const LeftFilters = () => {
           color: '#3a8589',
           height: 3,
           padding: '13px 0',
-          marginLeft: 25,
+          marginLeft: 2,
           width: 200
         },
         thumb: {
@@ -118,7 +118,7 @@ export const LeftFilters = () => {
             <GpsFixedIcon className = {classes.iconColor} /><Typography variant = "subtitle2" >GPS Enalbed Buses</Typography>
         </ListItem>
         <Grid style = {{padding: "7%"}} >
-          <Typography style = {{marginLeft: "2%"}}>Price</Typography>
+          <Typography style = {{textAlign: "left"}}>Price</Typography>
           <AirbnbSlider
                 ThumbComponent={AirbnbThumbComponent}
                 getAriaLabel={(index) => (index === 0 ? 'Minimum price' : 'Maximum price')}

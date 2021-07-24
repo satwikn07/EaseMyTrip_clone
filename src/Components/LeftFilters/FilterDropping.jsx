@@ -22,6 +22,10 @@ const useStyles = makeStyles((theme) => ({
     },
     textSize: {
         fontSize: "10px"
+    },
+    arrrow : {
+        position: "absolute",
+        marginLeft: "80%"
     }
   }));
 
@@ -37,7 +41,7 @@ export const FilterDropping = () => {
         <div>
             <ListItem button onClick={handleDropping}>
             <Typography className = {classes.departureButton}>DROPPING POINTS</Typography>
-                {dropping ? <ExpandLess /> : <ExpandMore />}
+                <div className = {classes.arrrow}>{dropping ? <ExpandLess /> : <ExpandMore />}</div>
             </ListItem>
                 <Collapse in={dropping} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding>        

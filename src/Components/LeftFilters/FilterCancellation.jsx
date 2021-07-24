@@ -19,9 +19,13 @@ const useStyles = makeStyles((theme) => ({
         fontSize: "13px",
         marginRight: "33%"
     },
-        textSize: {
-            fontSize: "10px"
-        }
+    textSize: {
+        fontSize: "10px"
+    },
+    arrrow : {
+        position: "absolute",
+        marginLeft: "80%"
+    }
 }));
 
 
@@ -35,7 +39,7 @@ export const FilterCancellation = () => {
         <div>
             <ListItem button onClick={handleCancellation}>
             <Typography className = {classes.departureButton}>FREE CANCELLATION</Typography>
-            {cancellation ? <ExpandLess /> : <ExpandMore />}
+            <div className = {classes.arrrow}>{cancellation ? <ExpandLess /> : <ExpandMore />}</div>
         </ListItem>
             <Collapse in={cancellation} timeout="auto" unmountOnExit>
                 <List component="div" disablePadding>        

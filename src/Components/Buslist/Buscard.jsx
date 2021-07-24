@@ -3,6 +3,7 @@ import styles from "./Buscard.module.css"
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { SeatsModal } from '../Seats/SeatsModal';
 const useStyles = makeStyles((theme) => ({
     root: {
       '& > *': {
@@ -17,7 +18,7 @@ export const Buscard = ({bus}) =>{
             <div className={styles.upper}>
                 <div className={styles.inner}>
                     <div style={{float:"left",fontWeight:"600",fontSize:"16px"}}>{bus.bus_name}</div>
-                    <div style={{float:"left",clear:"left",fontWeight:"400",fontSize:"13px",color:"#838484"}}>NON AC/ 2 X 2 sleeper coach</div>
+                    <div style={{float:"left",clear:"left",fontWeight:"400",fontSize:"6.5px",color:"#838484"}}>NON AC/ 2 X 2 sleeper coach</div>
                 </div>
                 <div className={styles.inner}>
                     <div style={{float:"left",fontWeight:"600",fontSize:"18px"}}>{bus.start_time}</div>
@@ -34,9 +35,10 @@ export const Buscard = ({bus}) =>{
 
                 </div>
                 <div className={styles.inner} style={{paddingTop:"1vh"}}>
-                    <button className={styles.Button}>
+                    {/* <button className={styles.Button}>
                         Select Seats
-                    </button> <br />
+                    </button> <br /> */}
+                    <SeatsModal/>
                     <span style={{color:"#838484",fontSize:"11px",fontWeight:"400"}}>
                         20 seats left
                     </span>

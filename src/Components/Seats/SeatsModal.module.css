@@ -1,0 +1,23 @@
+.modal{
+    margin-bottom: 30%;
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 10px;
+}
+
+.Button{
+    background:#ef6614;
+    color:white;
+    border-radius: 3px;
+    cursor: pointer;
+    height:5vh;
+    width:70%;
+    border: none;
+    outline: none;  
+    
+  
+}
+.Button:hover{
+    background:#DA5200;
+}

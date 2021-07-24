@@ -21,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
     },
     textSize: {
         fontSize: "10px"
+    },
+    arrrow : {
+        position: "absolute",
+        marginLeft: "80%"
     }
   }));
 
@@ -35,7 +39,7 @@ export const FilterBoarding = () => {
         <div>
             <ListItem button onClick={handleBoarding}>
             <Typography className = {classes.departureButton}>BOARDING POINTS</Typography>
-                {boarding ? <ExpandLess /> : <ExpandMore />}
+                <div className = {classes.arrrow} >{boarding ? <ExpandLess /> : <ExpandMore />}</div>
             </ListItem >
                 <Collapse in={boarding} timeout="auto" unmountOnExit>
                     <List component="div" disablePadding >        

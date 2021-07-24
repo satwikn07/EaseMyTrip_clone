@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
@@ -21,6 +21,10 @@ const useStyles = makeStyles((theme) => ({
     },
     textSize: {
         fontSize: "10px"
+    },
+    arrrow : {
+        position: "absolute",
+        marginLeft: "80%"
     }
   }));
 
@@ -32,15 +36,17 @@ export const FilterAmenities = () => {
     const handleAmenities = () => {
         setAmenities(!amenities);
     }
+
     return (
+        
         <div>
             <ListItem button onClick={handleAmenities}>
             <Typography className = {classes.departureButton}>AMENITIES</Typography>
-                {amenities ? <ExpandLess /> : <ExpandMore />}
+               <div className = {classes.arrrow}> {amenities ? <ExpandLess /> : <ExpandMore />} </div>
             </ListItem>
                 <Collapse in={amenities} timeout="auto" unmountOnExit>
-                    <List component="div" disablePadding>        
-                    <ListItem button className={classes.nested}>
+                <List component="div" disablePadding> 
+                        <ListItem button className={classes.nested}>
                             <Checkbox
                                 color="primary"
                                 inputProps={{ 'aria-label': 'secondary checkbox' }}
