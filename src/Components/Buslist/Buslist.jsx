@@ -71,15 +71,15 @@ export const Buslist = () => {
               <div style = {{border: "1px solid #53C6F2", background: "#41A4F0", marginTop: "-0.4%", padding: "1%", display: "flex"}}>
                 <div style = {{marginLeft: "11%"}}>
                   <h4 style = {{color: "white", textAlign: "left"}}>SOURCE CITY</h4>
-                  <input type="text" style = {{padding: "5px", color: "white", width: "250px"}} />
+                  <div style = {{padding: "5px", color: "white", width: "250px",textAlign: "left"}} >HYDERABAD</div>
                 </div>
                 <div style = {{marginLeft: "5%"}}>
                   <h4 style = {{color: "white", textAlign: "left"}}>DESTINATION CITY</h4>
-                  <input type="text" style = {{padding: "5px", color: "white", width: "250px"}}/>
+                  <div style = {{padding: "5px", color: "white", width: "250px",textAlign: "left"}}>BANGALORE</div>
                 </div>
                 <div style = {{marginLeft: "5%"}}>
                   <h4 style = {{color: "white", textAlign: "left"}}>DEPARTURE DATE</h4>
-                  <input type="date" style = {{color: "white", width: "250px"}} />
+                  <div style = {{padding: "5px", color: "white", width: "250px",textAlign: "left"}}>25 July, 2021</div>
                 </div>
                   <button style = {{border: "1px solid white", color:"white", width: "180px", borderRadius: "5px", fontSize: "15px", marginLeft: "5%", padding: "1%", background: "#51C3F1"}}>Submit</button>
               </div>
