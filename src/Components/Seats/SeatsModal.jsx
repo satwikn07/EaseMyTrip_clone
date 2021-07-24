@@ -80,7 +80,7 @@ export const SeatsModal = () => {
                             </div>
                             <div style = {{display: "flex", marginLeft: "2%"}}>
                                 <p>InterCIty Smart Bus </p>
-                                <p>30 July 2021</p>
+                                <p style = {{marginLeft:"72%"}}>30 July 2021</p>
                             </div>
                             
                             <div style = {{border: "1px dotted grey", margin: "9px 0", marginLeft: "2%"}}></div>
@@ -148,10 +148,21 @@ export const SeatsModal = () => {
                             <Typography>Select a Boarding Point</Typography>
                             <select style = {{border: "1px solid lightgrey", width: "100%", padding: "3%", marginBottom: "3%"}}>
                                 <option value="">---Select---</option>
+                                <option value="shamsa">Shamsabad</option>
+                                <option value="aram">Aramnagar</option>
+                                <option value="mehndi">MehndiPatnam</option>
+                                <option value="srnagar">SR nagar</option>
+                                <option value="panja">Panjagutta</option>
                             </select>
                             <Typography>Select a Dropping Point</Typography>
                             <select style = {{border: "1px solid lightgrey", width: "100%", padding: "3%", marginBottom: "3%"}}>
                                 <option value="">---Select---</option>
+                                <option value="kalasi">Kalasipalyam</option>
+                                <option value="anand">Anand Rao Circle</option>
+                                <option value="majestic">Majestic Intercity</option>
+                                <option value="labagh">LalBagh Infront of Lalbagh Main</option>
+                                <option value="nagar">Jai Nagar 4 block</option>
+                                <option value="silk">Silk Road</option>
                             </select>
                             <Typography>Select Seats</Typography>
                             
@@ -161,6 +172,10 @@ export const SeatsModal = () => {
                                 </div>
                                 <div style = {{display: "flex"}}>
                                     <p>GST & Operator Fees</p> <span style = {{marginLeft: "45.5%"}}>₹ 0</span>
+                                </div>
+                                <br />
+                                <div style = {{border: "1px solid #9E8558",background: "#FAEBCC", width: "40px", padding: "5px"}}>
+                                    <div>U1</div>
                                 </div>
                                 <br />
                                 <div style = {{display: "flex"}}>
