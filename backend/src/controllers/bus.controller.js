@@ -8,8 +8,9 @@ router.get('/',async(req,res)=>{
     return res.status(200).json({data:buses})
 })
 //fetching a single bus 
-router.get('/:id', async(req,res)=>{
-    const bus = await Bus.findById(req.params.id);
+router.get('/:name', async(req,res)=>{
+    console.log(req.params);
+    const bus = await Bus.findOne({bus_name:req.params.name}).lean().exec();
     return res.status(200).json({data:bus})
 })
 

@@ -40,7 +40,7 @@ export const Buslist = () => {
         const data = await axios.get(
           "http://localhost:8000/buses"
         );
-        console.log(data)
+        // console.log(data)
         setBuses(data.data.data);
         setisLoading(false);
         // console.log(data.data);

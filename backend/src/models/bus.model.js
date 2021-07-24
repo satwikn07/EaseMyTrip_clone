@@ -1,16 +1,16 @@
 const mongoose = require('mongoose');
 
 const busSchema = new mongoose.Schema({
-    bus_name:{type:Number,required:true},
+    bus_name:{type:String,required:true},
     boarding:{type:String,required:true},
     destination:{type:String,required:true},
-    vacant_seats:{type:Number,required:true},
     ratings:{type:Number,required:true},
+    price:{type:Number,required:true},
     start_time:{type:String,required:true},
     reach_time:{type:String,required:true},
     ac:{type:Boolean,required:true},
     blanket:{type:Boolean,required:true},
-    tv:{type:Boolean,required:true},
+    personal_tv:{type:Boolean,required:true},
     pillow:{type:Boolean,required:true},
     wifi:{type:Boolean,required:true},
     toilet:{type:Boolean,required:true},

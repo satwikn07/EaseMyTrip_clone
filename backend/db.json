@@ -1,163 +1,7 @@
 [{
-      "id": 1,
       "bus_name": "Langosh, Kessler and Doyle",
       "boarding": "Hyderabad",
-      "destination": "chennai",
-      "total_seats": 69,
-      "occupied_seats": 12,
-      "lower_seat_matrix": [
-        [
-          {
-            "booked": false,
-            "selected": false,
-            "name": "L1"
-          },
-          {
-            "booked": true,
-            "name": "L2"
-          },
-          {
-            "booked": false,
-            "selected": false,
-            "name": "L3"
-          },
-          {
-            "booked": false,
-            "selected": false,
-            "name": "L4"
-          },
-          {
-            "booked": true,
-            "name": "L5"
-          }
-        ],
-        [
-          {
-            "booked": true,
-            "name": "L6"
-          },
-          {
-            "booked": false,
-            "selected": false,
-            "name": "L7"
-          },
-          {
-            "booked": false,
-            "selected": false,
-            "name": "L8"
-          },
-          {
-            "booked": true,
-            "name": "L9"
-          },
-          {
-            "booked": true,
-            "name": "L10"
-          }
-        ],
-        [
-          {
-            "booked": true,
-            "selected": false,
-            "name": "L11"
-          },
-          {
-            "booked": false,
-            "name": "L12"
-          },
-          {
-            "booked": false,
-            "name": "L13"
-          },
-          {
-            "booked": true,
-            "selected": false,
-            "name": "L14"
-          },
-          {
-            "booked": true,
-            "selected": false,
-            "name": "L15"
-          }
-        ]
-      ],
-      "upper_seat_matrix": [
-        [
-          {
-            "booked": false,
-            "selected": false,
-            "name": "U1"
-          },
-          {
-            "booked": true,
-            "name": "U2"
-          },
-          {
-            "booked": false,
-            "selected": false,
-            "name": "U3"
-          },
-          {
-            "booked": false,
-            "selected": false,
-            "name": "U4"
-          },
-          {
-            "booked": true,
-            "name": "U5"
-          }
-        ],
-        [
-          {
-            "booked": false,
-            "selected": false,
-            "name": "U6"
-          },
-          {
-            "booked": true,
-            "name": "U7"
-          },
-          {
-            "booked": true,
-            "name": "U8"
-          },
-          {
-            "booked": false,
-            "selected": false,
-            "name": "U9"
-          },
-          {
-            "booked": true,
-            "name": "U10"
-          }
-        ],
-        [
-          {
-            "booked": false,
-            "selected": false,
-            "name": "U11"
-          },
-          {
-            "booked": false,
-            "selected": false,
-            "name": "U12"
-          },
-          {
-            "booked": true,
-            "name": "U13"
-          },
-          {
-            "booked": false,
-            "selected": false,
-            "name": "U14"
-          },
-          {
-            "booked": false,
-            "selected": false,
-            "name": "U15"
-          }
-        ]
-      ],
+      "destination": "Bangalore",
       "ratings": 2.8,
       "price": 1163,
       "start_time": "5:44 AM",
@@ -168,16 +12,12 @@
       "personal_tv": true,
       "pillow": false,
       "wifi": false,
-      "toilet": true,
-      "before_6AM": true
+      "toilet": true
     },
     {
-      "id": 2,
-      "bus_name": "Schimmel, Doyle and Connelly",
+       "bus_name": "Dharitri",
       "boarding": "Hyderabad",
       "destination": "Bangalore",
-      "total_seats": 65,
-      "occupied_seats": 16,
       "ratings": 3.8,
       "price": 1040,
       "start_time": "11:54 AM",
@@ -188,8 +28,7 @@
       "personal_tv": false,
       "pillow": true,
       "wifi": true,
-      "toilet": true,
-      "6AM_to_12PM": true
+      "toilet": true
     },
     {
       "id": 3,
