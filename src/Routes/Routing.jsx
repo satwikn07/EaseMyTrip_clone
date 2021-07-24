@@ -6,7 +6,7 @@ import { Buslist } from '../Components/Buslist/Buslist'
 
 const Routing = () => {
     return (
-        <div>
+        <div style={{width:"98.3vw"}}>
             <Navbar />
             <Switch>
                 <Route exact path="/bus">

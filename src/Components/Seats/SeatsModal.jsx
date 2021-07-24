@@ -5,6 +5,7 @@ import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import styles from "./SeatsModal.module.css"
 import EventSeatOutlinedIcon from '@material-ui/icons/EventSeatOutlined';
 import { makeStyles } from '@material-ui/styles';
+import {ImCross} from "react-icons/im"
 export const SeatsModal = () => {
 
     const [showSeats, setShowSeats] = useState(false)
@@ -42,10 +43,10 @@ export const SeatsModal = () => {
     const classes = useStyles()
     return (
         <div>
-            <button onClick = {() => setShowSeats(true)} >OPEN</button>
+            <button onClick = {() => setShowSeats(true)} className={styles.Button} >Select Seats</button>
             {/* <div > */}
-                <Modal className = {styles.modal} isOpen = {showSeats} onRequestClose = {() => setShowSeats(true)} style = {{overlay: {backgroundColor: "grey", border: "1px solid grey", opacity: "0.9"}}} >
-                    <div style = {{display: "flex", background: "#FEFEFE"}}>
+                <Modal className = {styles.modal} isOpen = {showSeats} onRequestClose = {() => setShowSeats(false)} style = {{overlay: {backgroundColor: "grey", border: "1px solid grey"}}} >
+                    <div style = {{display: "flex", background: "white"}}>
                         <div style = {{width: "70%"}}>
                             <div style = {{display: "flex", marginLeft: "2%", marginTop: "2%"}}>
                                 <h2>Hyderabad</h2>
@@ -107,25 +108,25 @@ export const SeatsModal = () => {
                                 </div>
                                 <div style = {{marginLeft: "35%", marginTop: "-3%", width: "70%"}}>
                                     <div style = {{marginBottom: "1%"}}>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U1</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U4</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U7</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U10</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U13</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L1</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L4</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L7</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L10</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L13</Button>
                                     </div>
                                     <div style = {{marginBottom: "5%"}}>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U1</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U4</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U7</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U10</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U13</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L1</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L4</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L7</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L10</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L13</Button>
                                     </div>
                                     <div>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U1</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U4</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U7</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U10</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U13</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L1</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L4</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L7</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L10</Button>
+                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L13</Button>
                                     </div>
                                 </div>
                             </div>
@@ -137,6 +138,9 @@ export const SeatsModal = () => {
                             </div>
                         </div>
                         <div style = {{ background: "#EEEEEE", marginLeft: "0.5%", padding: "1%", width: "30%"}}>
+                            <div style = {{marginLeft: "94%"}}>
+                                <button onClick = {() => setShowSeats(false)} style = {{border: "1px solid lightgrey", color: "gray", padding: "5px", borderRadius: "50%", cursor: "pointer"}}><ImCross/></button>
+                            </div>
                             <Typography>Select a Boarding Point</Typography>
                             <select style = {{border: "1px solid lightgrey", width: "100%", padding: "3%", marginBottom: "3%"}}>
                                 <option value="">---Select---</option>

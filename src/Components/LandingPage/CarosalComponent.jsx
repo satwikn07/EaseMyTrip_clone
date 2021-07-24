@@ -73,7 +73,8 @@ const CarosalComponent = () => {
         breakPoints={breakPoints}
         autoTabIndexVisibleItems={true}
         className="rec.rec-arrow"
-        enableAutoPlay autoPlaySpeed={3000}
+        enableAutoPlay
+        autoPlaySpeed={3000}
       >
         {items.map((item) => (
           <div className="sliderDiv" key={item.id}>

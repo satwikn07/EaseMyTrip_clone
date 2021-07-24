@@ -1,5 +1,5 @@
 .mid_div {
-  width: 79%;
+  width: 80%;
   height: 17rem;
   margin: auto;
   text-align: center;
@@ -17,7 +17,7 @@
   margin-top: 20px;
   display: grid;
   grid-template: "div div div div";
-  gap: 40px;
+  gap: 30px;
 }
 
 .grid1,
@@ -38,16 +38,16 @@
 .grid4:hover {
   transform: scale(1.15);
 }
-.gridsImages{
+.gridsImages {
   width: 80px;
   height: 50px;
 }
-.grid_headings{
+.grid_headings {
   font-weight: 400;
-  font-size: 19px;
+  font-size: 18px;
 }
-.grid_div_paragraph{
-  font-size: 14px;
+.grid_div_paragraph {
+  font-size: 13px;
   font-weight: 400;
   padding-top: 10px;
   color: rgb(94, 92, 92);

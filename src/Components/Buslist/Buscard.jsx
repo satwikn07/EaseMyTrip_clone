@@ -3,6 +3,7 @@ import styles from "./Buscard.module.css"
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import { SeatsModal } from '../Seats/SeatsModal';
 const useStyles = makeStyles((theme) => ({
     root: {
       '& > *': {
@@ -34,9 +35,10 @@ export const Buscard = ({bus}) =>{
 
                 </div>
                 <div className={styles.inner} style={{paddingTop:"1vh"}}>
-                    <button className={styles.Button}>
+                    {/* <button className={styles.Button}>
                         Select Seats
-                    </button> <br />
+                    </button> <br /> */}
+                    <SeatsModal/>
                     <span style={{color:"#838484",fontSize:"11px",fontWeight:"400"}}>
                         20 seats left
                     </span>

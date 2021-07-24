@@ -4,17 +4,12 @@ import React from 'react'
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '220%',
-        marginLeft: "20%"
+        width: '100%',
     },
     allButton: {
-        marginLeft: "15%",
-        position: "relative",
-        display: "flex",
-        flexDirection: "row",
     },
-    buttonGap: {
-        margin: "-175% 14.3% 0 7%"
+    buttonGap:{
+        width:"19%"
     }
   }));
 
