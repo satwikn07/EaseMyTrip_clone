@@ -168,3 +168,7 @@ input[type="submit"]{
     color: rgb(153, 151, 151);
     padding-left: 30px;
 }
+
+.modal {
+  margin:15% 30% 10% 45%;
+}

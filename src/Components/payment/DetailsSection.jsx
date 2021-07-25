@@ -53,19 +53,19 @@ export default function DetailsSection() {
               </div>
               <div>
                 <p className="headingname">Boarding Time</p>
-                <h3>16:00</h3>
+                <h3>11:54</h3>
               </div>
               <div style={{ marginLeft: "5px" }}>
                 <img src={busicon} alt="img" style={{ padding: "5px" }} />{" "}
-                <p style={{ color: "grey", fontSize: "10px" }}>50h 40m</p>
+                <p style={{ color: "grey", fontSize: "10px" }}>12h 53m</p>
               </div>
               <div style={{ marginLeft: "5px" }}>
                 <p className="headingname">Arrival Time</p>
-                <h3>16:00</h3>
+                <h3>12:47</h3>
               </div>
               <div>
                 <p className="headingname">Seat no(s)</p>
-                <p className="seatsclass">28(SL)</p>
+                <p className="seatsclass">U4</p>
               </div>
               <div>
                 <p className="headingname">No of Passengers(s)</p>
@@ -79,11 +79,11 @@ export default function DetailsSection() {
               <div className="boardingdetails">
                 <div>
                   <p className="bgboard">Boarding Point</p>
-                  <p className="boardAdd">Bangalore, Karnataka</p>
+                  <p className="boardAdd">Shamsabad, Hyderabad</p>
                 </div>
                 <div>
                   <p className="bgboard">Dropping Point</p>
-                  <p className="boardAdd">Bangalore, Karnataka</p>
+                  <p className="boardAdd">Kalasipalyam, Bangalore</p>
                 </div>
               </div>
               <div className="operatorname">
