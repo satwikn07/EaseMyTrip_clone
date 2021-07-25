@@ -73,6 +73,9 @@ export default function PriceDicount() {
               error={error}
               className={classes.formControl}
             >
+
+            <input type="text" /><button>Button</button>
+
               <RadioGroup
                 aria-label="quiz"
                 name="quiz"

@@ -5,11 +5,6 @@ import busicon from "./busicon.png";
 export default function DetailsSection() {
     return (
       <div className="detailsection">
-        <div  style={{
-            fontSize: "20px",
-            background: "#EEEEEE",
-    
-          }}>
         {" "}
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -24,15 +19,13 @@ export default function DetailsSection() {
           style={{
             fontSize: "20px",
             background: "#EEEEEE",
-  
             float: "right",
-            marginRight: "48rem",
+            marginRight: "46rem",
             marginTop: "5px",
           }}
         >
           Bus Details
         </span>
-        </div>
         <div className="busdetails">
           <div className="detailsarea">
             <svg
@@ -51,7 +44,7 @@ export default function DetailsSection() {
                   src="https://img.icons8.com/ios-glyphs/30/000000/long-arrow-right.png"
                   width="15px"
                 />
-                <span>Mumbai</span>
+                <span>Bangalore</span>
                 <p
                   style={{ textAlign: "left", color: "grey", fontSize: "10px" }}
                 >
@@ -93,12 +86,10 @@ export default function DetailsSection() {
                   <p className="boardAdd">Bangalore, Karnataka</p>
                 </div>
               </div>
-             
-              <div className="operatorname" style={{borderLeft:"1px solid #C7C6C6",paddingLeft:"20px"}}>
-                <p className="bgboard" style={{backgroundColor:"#E3EDF5"}}>Bus Operator</p>
-                <p className="boardAdd">IntrCity SmartBus (Washroom onboard)
-</p>
-                <p style={{ color: "grey",fontSize:"14px" }}>Sleeper Delux</p>
+              <div className="operatorname">
+                <p className="bgboard">Bus Operator</p>
+                <p className="boardAdd">Private ltd</p>
+                <p style={{ color: "grey" }}>Sleeper Delux</p>
               </div>
             </div>
           </div>

@@ -1,12 +1,12 @@
 import './App.css';
 import Routing from './Routes/Routing';
-import Payment from "./Components/payment/Payment"
+import { Review } from './Components/payment/Review';
 
 function App() {
   return (
     <div className="App">
-      <Routing />
-      {/* <Payment/> */}
+      {/*<Routing />*/}
+      <Review/>
     </div>
   );
 }
