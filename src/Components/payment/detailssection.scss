@@ -45,6 +45,7 @@
          >.headingname{
            padding-top: 5px;
            font-size: 10px;
+          
          }
 
          >.seatsclass{
@@ -78,13 +79,15 @@
           
         >.bgboard{
           color: lightslategrey;
+          background-color: #E3EDF5;
         }
 
           >.boardAdd{
             font-weight: 700;
           }
           >p{
-            font-size: 12px;
+            font-size: 13px;
+            font-weight: 600;
           }
         }
 
@@ -99,10 +102,12 @@
 
 
           >.boardAdd{
-            font-weight: 700;
+            font-weight: 600;
+            font-size: 14px;
           }
           >p{
             font-size: 12px;
+
           }
       }
       }

@@ -1,5 +1,6 @@
 import { Button, Typography } from '@material-ui/core'
 import React, { useState, useEffect } from 'react'
+import {useHistory} from 'react-router';
 import Modal from "react-modal"
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import styles from "./SeatsModal.module.css"
@@ -16,7 +17,10 @@ export const SeatsModal = ({bus}) => {
     const [lsm,setLsm] = useState([]);
     const [usm,setUsm] = useState([]);
     const [count,setCount] = useState(0);
-    
+    const history = useHistory();
+    const toReview = () =>{
+        history.push('/review')
+    }
     // const [selectedSeats,setSelectedseats] = useState([]);
     useEffect(()=>{
         fetchSeatDetails();
@@ -196,7 +200,7 @@ export const SeatsModal = ({bus}) => {
                                     <span style = {{marginLeft:"62%"}}>₹ {bus.price*count+((bus.price*count)*18/100)}</span>
                                 </div>           
                             </div>
-                            <Button variant="contained" className = {classes.continueButton} >
+                            <Button variant="contained" className = {classes.continueButton} onClick={toReview} >
                                 CONTINUE
                             </Button>
                             
