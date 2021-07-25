@@ -70,11 +70,23 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
 
-### Dependencies : 
-    ## npm i react-router-dom
-    ## npm i axios
-    ## npm i redux
+### Dependencies :
+  
+    ## npm i date-fns
+    ## npm i ityped
+    ## npm i json-server
+    ## npm i node-sass
+    ## npm i react
+    ## npm i react-dom
+    ## npm i react-elastic-carousel
+    ## npm i react-icons
+    ## npm i react-loading-overlay
+    ## npm i react-modal
     ## npm i react-redux
-    ## npm i @material-ui/lab
-    ## npm i @material-ui/core
-    ## npm i @material-ui/icons
+    ## npm i react-router-dom
+    ## npm i react-scripts
+    ## npm i redux
+    ## npm i sass
+    ## npm i sass-loader
+    ## npm i serve
+    ## npm i styled-components
