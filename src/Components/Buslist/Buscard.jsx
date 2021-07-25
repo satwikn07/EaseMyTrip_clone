@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 export const Buscard = ({bus}) =>{
-    console.log(bus);
+    // console.log(bus);
     return (
         <div className={styles.card}>
             <div className={styles.upper}>
@@ -38,7 +38,7 @@ export const Buscard = ({bus}) =>{
                     {/* <button className={styles.Button}>
                         Select Seats
                     </button> <br /> */}
-                    <SeatsModal/>
+                    <SeatsModal bus={bus}/>
                     <span style={{color:"#838484",fontSize:"11px",fontWeight:"400"}}>
                         20 seats left
                     </span>

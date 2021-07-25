@@ -7,7 +7,7 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Checkbox from '@material-ui/core/Checkbox';
 import { Typography } from '@material-ui/core';
-
+import axios from 'axios';
 const useStyles = makeStyles((theme) => ({
     root: {
         border: "1px solid lightgrey",
@@ -28,11 +28,23 @@ const useStyles = makeStyles((theme) => ({
     }
   }));
 
-export const FilterBusType = () => {
+export const FilterBusType = ({setBuses}) => {
     const classes = useStyles();
     const [busType, setBusType] = React.useState(false);
-    const handleBusType = () => {
-        setBusType(!busType);
+    const handleBusType = async() => {
+        setBusType(!busType);   
+       
+    }
+    const handleFilter = async(e) =>{
+            if(e.target.checked){
+                setBuses(prev=>prev.filter(bus=>bus.ac===true));
+            }else{
+                const data = await axios.get(
+                    "http://localhost:8000/buses"
+                  );
+                  // console.log(data)
+                  setBuses(data.data.data);
+            }
     }
     return (
         <div>
@@ -45,8 +57,9 @@ export const FilterBusType = () => {
                         <ListItem button className={classes.nested}>
                             <Checkbox
                                 color="primary"
+                                onClick={(e)=>handleFilter(e)}
                                 inputProps={{ 'aria-label': 'secondary checkbox' }}
-                            /> <Typography>AC</Typography>
+                            /> <Typography >AC</Typography>
                         </ListItem>
                         <ListItem button className={classes.nested}>
                             <Checkbox

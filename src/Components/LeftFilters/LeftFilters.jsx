@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
     }
   }));
 
-export const LeftFilters = () => {
+export const LeftFilters = ({setBuses}) => {
 
     const classes = useStyles();
 
@@ -131,7 +131,7 @@ export const LeftFilters = () => {
         <Divider light />
             <FilterCancellation/>
         <Divider light />
-            <FilterBusType/>
+            <FilterBusType setBuses={setBuses}/>
         <Divider light />
             <FilterBoarding/>
         <Divider light />

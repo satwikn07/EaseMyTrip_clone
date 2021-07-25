@@ -1,15 +1,49 @@
 import { Button, Typography } from '@material-ui/core'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import {useHistory} from 'react-router';
 import Modal from "react-modal"
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import styles from "./SeatsModal.module.css"
 import EventSeatOutlinedIcon from '@material-ui/icons/EventSeatOutlined';
 import { makeStyles } from '@material-ui/styles';
-import {ImCross} from "react-icons/im"
-export const SeatsModal = () => {
-
-    const [showSeats, setShowSeats] = useState(false)
-
+import Grid from "@material-ui/core/Grid";
+import {ImCross} from "react-icons/im" 
+import axios from 'axios';
+import {Seat} from './Seat';
+import {v4 as uuid} from 'uuid';
+export const SeatsModal = ({bus}) => {
+   
+    const [showSeats, setShowSeats] = useState(false);
+    const [lsm,setLsm] = useState([]);
+    const [usm,setUsm] = useState([]);
+    const [count,setCount] = useState(0);
+    const history = useHistory();
+    const toReview = () =>{
+        history.push('/review')
+    }
+    // const [selectedSeats,setSelectedseats] = useState([]);
+    useEffect(()=>{
+        fetchSeatDetails();
+    },[])
+    const fetchSeatDetails = async() => {
+        const data = await axios.get('http://localhost:1234/bus/4')
+        setLsm(data.data.lower_seat_matrix);
+        setUsm(data.data.upper_seat_matrix);
+    }
+    const seatSelection = (name) =>{
+        const updated_lower = lsm.map((row=>row.map(seat=>seat.name===name?{...seat,selected:!seat.selected}:seat)))
+        const updated_upper = usm.map((row=>row.map(seat=>seat.name===name?{...seat,selected:!seat.selected}:seat)))
+        // const selected_seats = [updated_lower.map((row=>row.filter(seat=>seat.selected==true))),
+        //     updated_upper.map((row=>row.filter(seat=>seat.selected==true)))
+        // 
+        setLsm(updated_lower);
+        setUsm(updated_upper);
+        // console.log(c);
+        // setSelectedseats(selected_seats);
+    }
+        //counting the selected seats
+    // console.log(lsm,usm);
+    // console.log(selectedSeats);
     const useStyles = makeStyles((theme) => ({
         booked: {
             color: "grey"
@@ -54,13 +88,14 @@ export const SeatsModal = () => {
                                 <h2>Bangalore</h2>
                             </div>
                             <div style = {{display: "flex", marginLeft: "2%"}}>
-                                <p>InterCIty Smart Bus </p>
+                                <p>{bus.bus_name}</p>
                                 <p style = {{marginLeft:"72%"}}>30 July 2021</p>
                             </div>
                             
                             <div style = {{border: "1px dotted grey", margin: "9px 0", marginLeft: "2%"}}></div>
                         
                             <div style = {{marginBottom: "2%", marginLeft: "2%"}}>
+                                
                                 <EventSeatOutlinedIcon className = {classes.booked} fontSize = "large"/><Typography variant = "caption" >Booked</Typography>
                                 <EventSeatOutlinedIcon className = {classes.available} fontSize = "large"/><Typography variant = "caption">Available</Typography>
                                 <EventSeatOutlinedIcon className = {classes.reserved} fontSize = "large"/><Typography variant = "caption">Reserved</Typography>
@@ -76,25 +111,15 @@ export const SeatsModal = () => {
                                 </div>
                                 <div style = {{marginLeft: "35%", marginTop: "-3%", width: "70%"}}>
                                     <div style = {{marginBottom: "1%"}}>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U3</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U6</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U9</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U12</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U15</Button>
+                                        {usm[0]?.map(seat=><Seat count={count} setCount={setCount} key={seat.name} seat={seat} seatSelection={seatSelection}/>)}
+                                       
                                     </div> 
                                     <div style = {{marginBottom: "5%"}}>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U2</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U5</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U8</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U11</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U14</Button>
+                                        {usm[1]?.map(seat=><Seat count={count} setCount={setCount} key={seat.name} seat={seat} seatSelection={seatSelection}/>)}
                                     </div> 
                                     <div>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U1</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U4</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U7</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U10</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>U13</Button>
+                                        {usm[2]?.map(seat=><Seat count={count} setCount={setCount} key={seat.name} seat={seat} seatSelection={seatSelection}/>)}
+
                                     </div> 
                                 </div>
                             </div>
@@ -108,25 +133,13 @@ export const SeatsModal = () => {
                                 </div>
                                 <div style = {{marginLeft: "35%", marginTop: "-3%", width: "70%"}}>
                                     <div style = {{marginBottom: "1%"}}>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L1</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L4</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L7</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L10</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L13</Button>
+                                        {lsm[0]?.map(seat=><Seat count={count} setCount={setCount} key={seat.name} seat={seat} seatSelection={seatSelection}/>)}
                                     </div>
                                     <div style = {{marginBottom: "5%"}}>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L1</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L4</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L7</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L10</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L13</Button>
+                                        {lsm[1]?.map(seat=><Seat count={count} setCount={setCount} key={seat.name} seat={seat} seatSelection={seatSelection}/>)}
                                     </div>
                                     <div>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L1</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L4</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L7</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L10</Button>
-                                        <Button variant="outlined" size = "40px" className = {classes.seatsDistance}>L13</Button>
+                                        {lsm[2]?.map(seat=><Seat count={count} setCount={setCount} key={seat.name} seat={seat} seatSelection={seatSelection}/>)}
                                     </div>
                                 </div>
                             </div>
@@ -161,24 +174,33 @@ export const SeatsModal = () => {
                                 <option value="silk">Silk Road</option>
                             </select>
                             <Typography>Select Seats</Typography>
+                            
                             <div style = {{border: "1px solid lightgrey", background: "white", padding: "3%", marginTop: "4%", marginBottom: "3%"}}>
                                 <div style = {{display: "flex"}} >
-                                    <p>Base Fare(+)</p> <span style = {{marginLeft: "65%"}} >₹ 0</span>
+                                    <p>Base Fare(+)</p> <span style = {{marginLeft: "65%"}} >₹ {bus.price} X {count}</span>
                                 </div>
                                 <div style = {{display: "flex"}}>
-                                    <p>GST & Operator Fees</p> <span style = {{marginLeft: "45.5%"}}>₹ 0</span>
+                                    <p>GST & Operator Fees</p> <span style = {{marginLeft: "45.5%"}}>₹{(bus.price*count)*18/100}</span>
                                 </div>
                                 <br />
-                                <div style = {{border: "1px solid #9E8558",background: "#FAEBCC", width: "40px", padding: "5px"}}>
-                                    <div>U1</div>
+                                <div style={{display:"flex"}}>
+                                {lsm[0]?.map(seat=>seat.selected==true?<div style={{marginRight:"5px"}}>{seat.name}</div>: null)}
+                                {lsm[1]?.map(seat=>seat.selected==true?<div style={{marginRight:"5px"}}>{seat.name}</div>: null)}
+                                {lsm[2]?.map(seat=>seat.selected==true?<div style={{marginRight:"5px"}}>{seat.name}</div>: null)}
+                                {usm[0]?.map(seat=>seat.selected==true?<div style={{marginRight:"5px"}}>{seat.name}</div>: null)}
+                                {usm[1]?.map(seat=>seat.selected==true?<div style={{marginRight:"5px"}}>{seat.name}</div>: null)}
+                                {usm[2]?.map(seat=>seat.selected==true?<div style={{marginRight:"5px"}}>{seat.name}</div>: null)}
+
+                                {/* {lsm?.filter((row=>row.filter(seat=>seat.selected==true))).map((el)=><div key={uuid()}>{el.name}</div>)} */}
+
                                 </div>
                                 <br />
                                 <div style = {{display: "flex"}}>
                                     <p>Total Amount</p>
-                                    <span style = {{marginLeft:"62%"}}>₹ 0</span>
+                                    <span style = {{marginLeft:"62%"}}>₹ {bus.price*count+((bus.price*count)*18/100)}</span>
                                 </div>           
                             </div>
-                            <Button variant="contained" className = {classes.continueButton} >
+                            <Button variant="contained" className = {classes.continueButton} onClick={toReview} >
                                 CONTINUE
                             </Button>
                             

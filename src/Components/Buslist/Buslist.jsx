@@ -38,12 +38,13 @@ export const Buslist = () => {
     try {
       setTimeout(async () => {
         const data = await axios.get(
-          "http://localhost:1234/bus?boarding=Hyderabad&destination=Bangalore"
+          "http://localhost:8000/buses"
         );
-        setBuses(data.data);
+        // console.log(data)
+        setBuses(data.data.data);
         setisLoading(false);
-        console.log(data.data);
-      }, 3000);
+        // console.log(data.data);
+      }, 2000);
     } catch (e) {
       setisLoading(false);
       setIsError(true);
@@ -64,6 +65,7 @@ export const Buslist = () => {
       }
       fadeSpeed={500}
     >
+      <div  style={{minHeight:"700px"}}>
       <Grid className={classes.root}>
         <Grid container spacing={2}>
           <Grid item xs={12}>
@@ -88,7 +90,7 @@ export const Buslist = () => {
           <Grid container spacing={1} style={{paddingLeft:"10vw"}}>
             <Grid item xs={12} sm={3}>
               <Grid className={classes.paper}>
-                <LeftFilters />
+                <LeftFilters setBuses={setBuses}/>
               </Grid>
             </Grid>
             <Grid item xs={12} sm={8}>
@@ -114,6 +116,7 @@ export const Buslist = () => {
           </Grid>
         </Grid>
       </Grid>
+      </div>
     </LoadingOverlay>
     </div>
   );
