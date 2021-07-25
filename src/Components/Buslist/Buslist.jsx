@@ -90,7 +90,7 @@ export const Buslist = () => {
           <Grid container spacing={1} style={{paddingLeft:"10vw"}}>
             <Grid item xs={12} sm={3}>
               <Grid className={classes.paper}>
-                <LeftFilters />
+                <LeftFilters setBuses={setBuses}/>
               </Grid>
             </Grid>
             <Grid item xs={12} sm={8}>
