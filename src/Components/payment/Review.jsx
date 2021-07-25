@@ -95,6 +95,9 @@ export const Review = () =>{
               <Grid item xs={8}>
                 <DetailsSection />
               </Grid>
+              <Grid item xs={3}>
+                <PriceDicount />
+              </Grid>
               <Grid item xs={8}>
                 <TravellerDetails />{" "}
               </Grid>
@@ -116,11 +119,13 @@ export const Review = () =>{
               <Grid item xs={8}>
                 <DetailsSection />
               </Grid>
+              <Grid item xs={3}>
+                <PriceDicount />
+              </Grid>
               <Grid item xs={8}>
                 <TravellerDetails />{" "}
               </Grid>
               <PaymentPage /> {/**Contact details form page*/}
-              
             </Grid>
           </div>
         ) : null}

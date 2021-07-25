@@ -1,41 +1,59 @@
 import "./pricediscount.scss";
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Radio from "@material-ui/core/Radio";
-import RadioGroup from "@material-ui/core/RadioGroup";
-import {FormControlLabel} from "@material-ui/core";
 import FormControl from "@material-ui/core/FormControl";
+import TextField from "@material-ui/core/TextField";
+
+import Button from "@material-ui/core/Button";
 
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
+  },
+    root: {
+    "& .MuiTextField-root": {
+      margin: theme.spacing(0.5),
+      float:"left",
+      width:"140px",
+      fontSize:"14px",
+      height:"14px"
+    },
+  },
+
+  btnroot:{
+    marginLeft:theme.spacing(2),
   }
 }));
 export default function PriceDicount() {
       const classes = useStyles();
+      
       const [value, setValue] = React.useState("");
       const [error, setError] = React.useState(false);
-      const [helperText, setHelperText] = React.useState("Choose wisely");
+      const [helperText, setHelperText] = React.useState("");
       const handleRadioChange = (event) => {
         setValue(event.target.value);
         setHelperText(" ");
-        setError(false);
+        console.log(value)
+
+        
+        if (value === "BUS10") {
+          setHelperText("Congratulation You successfully applied for coupon code");
+          setError(false);
+        } else if (value === "EASEDAY") {
+          setHelperText(
+            "Congratulation You successfully applied for coupon code easeday"
+          );
+          setError(true);
+        } else {
+          setHelperText("");
+          setError(true);
+        }
+
       };
 
       const handleSubmit = (event) => {
         event.preventDefault();
-
-        if (value === "BUS10") {
-          setHelperText("You got it!");
-          setError(false);
-        } else if (value === "EASEDAY") {
-          setHelperText("");
-          setError(true);
-        } else {
-          setHelperText("Please select an option.");
-          setError(true);
-        }
       };
 
     return (
@@ -73,26 +91,39 @@ export default function PriceDicount() {
               error={error}
               className={classes.formControl}
             >
+              <form className={classes.root} noValidate autoComplete="off">
+                <TextField id="standard-helperText" defaultValue={setValue} />
 
-            <input type="text" /><button>Button</button>
+                <Button
+                  variant="contained"
+                  className={classes.btnroot}
+                  color="primary"
+                >
+                  Apply
+                </Button>
 
-              <RadioGroup
-                aria-label="quiz"
-                name="quiz"
-                value={value}
-                onChange={handleRadioChange}
-              >
-                <FormControlLabel
-                  value="best"
-                  control={<Radio />}
-                  label="BUS10"
-                />
-                <FormControlLabel
-                  value="worst"
-                  control={<Radio />}
-                  label="EASEDAY"
-                />
-              </RadioGroup>
+                <span>{helperText}</span>
+              </form>
+              <div className="radiobtn">
+                <input
+                  id="BUS10"
+                  value="BUS10"
+                  name="platform"
+                  type="radio"
+                  onChange={handleRadioChange}
+                />{" "}
+                <span>EASEDAY</span>
+              </div>
+              <div className="radiobtn">
+                <input
+                  id="EASEDAY"
+                  value="EASEDAY"
+                  name="platform"
+                  type="radio"
+                  onChange={handleRadioChange}
+                />{" "}
+                <span>BUS10</span>
+              </div>
             </FormControl>
           </form>
         </div>
