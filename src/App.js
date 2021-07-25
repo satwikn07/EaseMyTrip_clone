@@ -1,10 +1,12 @@
 import './App.css';
-import Routing from './Routes/Routing';
+// import Routing from './Routes/Routing';
+import Payment from "./Components/payment/Payment"
 
 function App() {
   return (
     <div className="App">
-      <Routing />
+      {/*<Routing />*/}
+      <Payment/>
     </div>
   );
 }

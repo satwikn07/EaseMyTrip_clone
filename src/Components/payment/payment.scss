@@ -1,0 +1,27 @@
+.payment{
+    padding: 20px 0px 10px 10rem;
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.continue{
+    background: #EF6614;
+    color: white;
+    border: 1px solid #EF6614;
+    width: 14rem;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.submit{
+    width: 90%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.pricediscount{
+    position: fixed;
+    margin-top: -30px;
+}

@@ -1,0 +1,32 @@
+.grandtotal{
+    font-weight: 600;
+    color: #D63B05;
+    background-color: white;
+    font-size: 18px;
+}
+
+.summarydetails{
+    width: 270px;
+    border: 1px solid #D2D2D2;
+    border-radius: 4px;
+    box-shadow: 0 0 4px #D2D2D2;
+
+    > .counpon{
+        background: #2196F3;
+        padding:8px;
+        color: white;
+    }
+}
+hr{
+    background-color: #D2D2D2;
+}
+
+.styling{
+    padding:10px;
+    background-color: white;
+    font-size:13px
+}
+
+.pricediscount>div{
+    margin-top: 30px;
+}
