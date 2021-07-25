@@ -34,7 +34,8 @@ for (let i = 2021; i < 2055; i++) {
 console.log(year)
 const PaymentPage = () => {
 
-    const [show,setShow]=useState(false)
+    const [payment, setPayment] = useState(false)
+    const [message, setMessage] = useState(false)
 
 
     return (
@@ -64,7 +65,7 @@ const PaymentPage = () => {
             </div>
           </div>
           <div className={styles.payment_fill_div}>
-            <form action="">
+      
               <div className={styles.pay_card_num}>
                 <label>Enter Your Card No.</label>
                 <input
@@ -131,23 +132,37 @@ const PaymentPage = () => {
               </div>
               <div className={styles.price_submit_btn}>
                 <h3 className={styles.h3_heading_fare}>
-                  Total Fare : ₹ <span className={styles.total_fare}>0000</span>
+                  Total Fare : ₹ <span className={styles.total_fare}>1200</span>
                 </h3>
-                <button onClick={()=>setShow(true)}>Make Payment</button>
+                <button onClick={()=>setPayment(true)}>Make Payment</button>
               </div>
               <div className={styles.pay_secure_info}>
                 We use 128-bit secure encryption providing you a SAFE payment
                 environment
               </div>
-            </form>
-            <Modal
-              isOpen={show}
-              onRequestClose={() => setShow(false)}
-              className={styles.modal}
-              style={{
-                overlay: { backgroundColor: "lightgrey", opacity: "0.9" },
-              }}
-            ></Modal>
+
+            <Modal className = {styles.modal} isOpen = {payment} onRequestClose = {() => setPayment(false)} style = {{overlay: {backgroundColor: "grey", border: "1px solid grey"}}}>
+              <div style = {{background: "white", width: "70%", height: "23vh", padding: "5px"}}>
+                <h2 style = {{textAlign: "center", color: "#348AEE"}}>Enter OTP</h2>
+                <div style = {{display: "flex"}}>
+                  <input style = {{height: "60px", width: "60px", marginRight: "5px", textAlign: "center"}} type="text" />
+                  <input style = {{height: "60px", width: "60px", marginRight: "5px", textAlign: "center"}}  type="text" />
+                  <input style = {{height: "60px", width: "60px", marginRight: "5px", textAlign: "center"}}  type="text" />
+                  <input style = {{height: "60px", width: "60px", marginRight: "5px", textAlign: "center"}}  type="text" />
+                </div>
+                <div>
+                  <button onClick={()=>setMessage(true)} style = {{color: "white", background: "#83D6FF", padding: "10px", marginLeft: "35%", marginTop: "5%"}}>Submit</button>
+                </div>
+              </div>
+              
+            </Modal>
+            <Modal className = {styles.modal} isOpen = {message} onRequestClose = {() => setMessage(false)} style = {{overlay: {backgroundColor: "grey", border: "1px solid grey"}}}>
+              <div style = {{background: "white", width: "80%", height: "30vh", padding: "5px"}}>
+                <h2 style = {{color: "#EF6614", textAlign: "center", marginTop:"19%"}}>Your seat is booked.</h2>
+                <h3 style = {{color: "#0CB482", textAlign: "center"}}>Thank you for booking with us!!</h3>
+              </div>
+              
+            </Modal>
           </div>
         </div>
       </div>
