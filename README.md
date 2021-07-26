@@ -37,10 +37,10 @@
 > ### redux-thunk ![redux-thunk](https://img.shields.io/npm/v/redux-thunk.svg)
 > ### socket.io-client ![socket.io-client](https://img.shields.io/npm/v/socket.io-client.svg)
 > ### styled-components ![styled-components](https://img.shields.io/npm/v/styled-components.svg)
-> ### node.js ![node.js](https://nodejs.org/en/)
-> ### express ![express](https://expressjs.com/)
-> ### mongo ![mongo](https://www.mongodb.com/try/download)
-> ### material-ui ![material](https://material-ui.com/)
+> ### node.js 
+> ### express 
+> ### mongo 
+> ### material-ui
 
 ## Hosted Platform
 > Backend hosted at https://localhost:8000/
