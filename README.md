@@ -1,92 +1,69 @@
-# Getting Started with Create React App
+# Easemytrip
+> EaseMyTrip is an Indian online travel company, founded in 2008 by Nishant Pitti, Rikant Pitti, and Prashant Pitti. Headquartered in New Delhi, the company provides hotel bookings, air tickets, holiday packages, bus bookings, and white-label services. EaseMyTrip has overseas offices in Singapore, Dubai, Maldives, and Bangkok.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Installing and Running
+> Executing the commands mentioned below one by one in your command line will help in making this React app up and running on your system in the development mode.
+> 
+> ```bash
+> git clone https://github.com/satwikn07/EaseMyTrip_clone.git
+> cd ./Easemytrip
+> npm install
+> npm run server
+> npm start
+> ```
+> After entering the commands mentioned above, open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
+> The backend will run on port 8000
 
-## Available Scripts
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-In the project directory, you can run:
+## NPM Packages used 
+> ### react ![React](https://img.shields.io/npm/v/react.svg)
+> ### react-dom ![React-dom](https://img.shields.io/npm/v/react-dom.svg)
+> ### testing-library/jest-dom ![@testing-library/jest-dom](https://img.shields.io/npm/v/@testing-library/jest-dom.svg)
+> ### testing-library/react ![@testing-library/react](https://img.shields.io/npm/v/@testing-library/react.svg)
+> ### @testing-library/user-event ![@testing-library/user-event](https://img.shields.io/npm/v/@testing-library/user-event.svg)
+> ### firebase ![firebase](https://img.shields.io/npm/v/firebase.svg)
+> ### query-string ![query-string](https://img.shields.io/npm/v/query-string.svg)
+> ### react-elastic-carousel ![react-elastic-carousel](https://img.shields.io/npm/v/react-elastic-carousel.svg)
+> ### react-emoji ![react-emoji](https://img.shields.io/npm/v/react-emoji.svg)
+> ### react-icons ![react-icons](https://img.shields.io/npm/v/react-icons.svg)
+> ### react-modal ![react-modal](https://img.shields.io/npm/v/react-modal.svg)
+> ### react-redux ![react-redux](https://img.shields.io/npm/v/react-redux.svg)
+> ### react-router-dom ![react-router-dom](https://img.shields.io/npm/v/react-router-dom.svg)
+> ### react-scripts ![react-scripts](https://img.shields.io/npm/v/react-scripts.svg)
+> ### react-scroll-to-bottom ![react-scroll-to-bottom](https://img.shields.io/npm/v/react-scroll-to-bottom.svg)
+> ### react-use ![react-use](https://img.shields.io/npm/v/react-use.svg)
+> ### redux ![redux](https://img.shields.io/npm/v/redux.svg)
+> ### redux-thunk ![redux-thunk](https://img.shields.io/npm/v/redux-thunk.svg)
+> ### socket.io-client ![socket.io-client](https://img.shields.io/npm/v/socket.io-client.svg)
+> ### styled-components ![styled-components](https://img.shields.io/npm/v/styled-components.svg)
+> ### node.js ![node.js](https://nodejs.org/en/)
+> ### express ![express](https://expressjs.com/)
+> ### mongo ![mongo](https://www.mongodb.com/try/download)
+> ### material-ui ![material](https://material-ui.com/)
 
-### `npm start`
+## Hosted Platform
+> Backend hosted at https://localhost:8000/
+> 
+> Frontend not yet hosted(Will be updated once it's deployed)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
+## Technologies Used
+> <img src = "https://i.stack.imgur.com/PgcSR.png" width = "100" height = "100" alt = "HTML Logo"/>
+> &ensp; <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1200px-CSS3_logo_and_wordmark.svg.png" width = "100" height = "100" alt ="HTML Logo"/>
+> &ensp; <img src = "https://cdn.iconscout.com/icon/free/png-256/javascript-2752148-2284965.png" width = "100" height = "100" alt = "Javascript Logo">
+> &ensp; <img src = "https://seeklogo.net/wp-content/uploads/2020/09/react-logo-512x512.png" width = "100" height = "100"alt ="React Logo" />
+> <img src = "https://i.stack.imgur.com/PgcSR.png" width = "100" height = "100" alt = "HTML Logo"/>
+> ## &ensp; HTML &emsp; &ensp;CSS &emsp; &ensp; Javascript &emsp; React &emsp; Node &emsp; Express &emsp; Mongo
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+> You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-### Code Splitting
+> To learn React, check out the [React documentation](https://reactjs.org/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> To leran Node, check out the [Node documentation](https://nodejs.org/en/docs/)
 
-### Analyzing the Bundle Size
+> To leran Node, check out the [Express documentation](https://expressjs.com/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-### Dependencies :
-  
-    ## npm i date-fns
-    ## npm i ityped
-    ## npm i json-server
-    ## npm i node-sass
-    ## npm i react
-    ## npm i react-dom
-    ## npm i react-elastic-carousel
-    ## npm i react-icons
-    ## npm i react-loading-overlay
-    ## npm i react-modal
-    ## npm i react-redux
-    ## npm i react-router-dom
-    ## npm i react-scripts
-    ## npm i redux
-    ## npm i sass
-    ## npm i sass-loader
-    ## npm i serve
-    ## npm i styled-components
+> To leran Node, check out the [Mongo documentation](https://docs.mongodb.com/)
